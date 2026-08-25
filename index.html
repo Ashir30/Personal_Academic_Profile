@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Ashir | Academic & Research Homepage</title>
+  <meta name="description" content="Academic homepage of Muhammad Ashir, MEXT Scholar & Graduate Researcher in Efficient ML, Distributed Edge AI, Vision-Language Models & Mixture-of-Experts.">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            academic: {
+              50: '#f8fafc',
+              100: '#f1f5f9',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#0f172a',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            serif: ['Newsreader', 'Georgia', 'serif'],
+            mono: ['JetBrains Mono', 'Fira Code', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Google Fonts & Lucide Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#fafafa] text-slate-800 font-sans antialiased selection:bg-blue-100 selection:text-blue-900">
+
+  <!-- Top Sticky Navigation -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80">
+    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#" class="font-bold text-slate-900 hover:text-blue-700 transition-colors flex items-center gap-2">
+        <span class="w-8 h-8 rounded-lg bg-slate-900 text-white flex items-center justify-center font-serif text-sm font-semibold">MA</span>
+        <span class="tracking-tight text-base font-semibold">Muhammad Ashir</span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-600">
+        <a href="#about" class="hover:text-slate-900 transition-colors">About</a>
+        <a href="#research" class="hover:text-slate-900 transition-colors">Research</a>
+        <a href="#publications" class="hover:text-slate-900 transition-colors">Publications</a>
+        <a href="#education" class="hover:text-slate-900 transition-colors">Education</a>
+        <a href="#awards" class="hover:text-slate-900 transition-colors">Awards</a>
+        <a href="#references" class="hover:text-slate-900 transition-colors">References</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="mailto:ashirmushtaq1234@gmail.com" class="px-4 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold shadow-sm transition-all flex items-center gap-1.5">
+          <i data-lucide="mail" class="w-3.5 h-3.5"></i>
+          <span>Email</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-6 py-12 space-y-16">
+
+    <!-- Bio / Hero Section -->
+    <section id="about" class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start pt-4">
+      
+      <!-- Profile Card (Left Column) -->
+      <div class="md:col-span-4 bg-white p-6 rounded-2xl border border-slate-200/90 shadow-sm space-y-5">
+        <div class="w-24 h-24 rounded-2xl bg-gradient-to-br from-blue-700 to-indigo-900 text-white flex items-center justify-center text-3xl font-serif font-bold shadow-md mx-auto md:mx-0">
+          MA
+        </div>
+
+        <div>
+          <h1 class="text-2xl font-bold text-slate-900">Muhammad Ashir</h1>
+          <p class="text-sm text-blue-700 font-medium mt-0.5">MEXT Scholar & AI Researcher</p>
+          <p class="text-xs text-slate-500 mt-1">Graduate School of Software & Information Science<br>Iwate Prefectural University, Japan</p>
+        </div>
+
+        <!-- Seeking PhD Status Badge -->
+        <div class="p-3.5 rounded-xl bg-blue-50/80 border border-blue-100 text-xs text-blue-900 space-y-1">
+          <div class="flex items-center gap-1.5 font-bold text-blue-700">
+            <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
+            Seeking Ph.D. Positions
+          </div>
+          <p class="text-[11px] text-blue-800/90 leading-relaxed">
+            Interested in doctoral research opportunities in <strong>Efficient ML Systems</strong>, <strong>Distributed Edge AI</strong>, and <strong>Vision-Language Models</strong>.
+          </p>
+        </div>
+
+        <!-- Contact Links -->
+        <div class="space-y-2.5 text-xs text-slate-600 border-t border-slate-100 pt-4">
+          <div class="flex items-center gap-2.5">
+            <i data-lucide="mail" class="w-4 h-4 text-slate-400 flex-shrink-0"></i>
+            <a href="mailto:ashirmushtaq1234@gmail.com" class="hover:text-blue-700 transition-colors font-mono">ashirmushtaq1234@gmail.com</a>
+          </div>
+          <div class="flex items-center gap-2.5">
+            <i data-lucide="phone" class="w-4 h-4 text-slate-400 flex-shrink-0"></i>
+            <span class="font-mono">+81 90-6314-6256</span>
+          </div>
+          <div class="flex items-center gap-2.5">
+            <i data-lucide="map-pin" class="w-4 h-4 text-slate-400 flex-shrink-0"></i>
+            <span>Morioka, Iwate, Japan</span>
+          </div>
+          <div class="flex items-center gap-2.5">
+            <i data-lucide="id-card" class="w-4 h-4 text-slate-400 flex-shrink-0"></i>
+            <a href="https://orcid.org/0009-0003-3220-7874" target="_blank" class="text-blue-700 hover:underline font-mono">ORCID: 0009-0003-3220-7874</a>
+          </div>
+        </div>
+
+        <!-- Quick Links Buttons -->
+        <div class="pt-2 flex flex-col gap-2">
+          <a href="mailto:ashirmushtaq1234@gmail.com" class="w-full py-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-white font-medium text-xs text-center transition-all flex items-center justify-center gap-1.5 shadow-sm">
+            <i data-lucide="mail" class="w-3.5 h-3.5"></i>
+            <span>Contact via Email</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Main Narrative & Research Overview (Right Column) -->
+      <div class="md:col-span-8 space-y-6">
+        
+        <div class="bg-white p-7 rounded-2xl border border-slate-200/90 shadow-sm space-y-4">
+          <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+            <i data-lucide="book-open" class="w-5 h-5 text-blue-700"></i>
+            Research Profile & Focus
+          </h2>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            I am an award-winning MS researcher working at the intersection of <strong>efficient machine learning systems</strong> and <strong>real-world distributed AI deployment</strong>. My research focuses on making multi-billion parameter Vision-Language Models (VLMs) and Large Language Models (LLMs) execute efficiently on resource-constrained commodity edge hardware.
+          </p>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            My framework, <strong>MoTE-VLM</strong> (Mixture of Tiny Experts for Vision-Language Models), deployed across a 3-node Raspberry Pi 5 cluster, won the <strong>Best Presentation Award at ICCAI 2026 (ACM)</strong> and was rated <em>“Highly Innovative”</em> during peer review.
+          </p>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            Currently, I am completing my master's research funded by the <strong>MEXT (Japanese Government) Scholarship</strong> at Iwate Prefectural University under the supervision of <strong>Prof. Hirokazu Madokoro</strong> and <strong>Prof. Stephanie Nix</strong>.
+          </p>
+        </div>
+
+        <!-- Core Research Areas Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          
+          <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm">
+            <div class="w-9 h-9 rounded-lg bg-blue-50 text-blue-700 flex items-center justify-center mb-3">
+              <i data-lucide="cpu" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900 mb-1">Efficient Machine Learning Systems</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Model compression, INT4/INT8 quantization, load-balancing loss formulation, and sparse computation.
+            </p>
+          </div>
+
+          <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm">
+            <div class="w-9 h-9 rounded-lg bg-indigo-50 text-indigo-700 flex items-center justify-center mb-3">
+              <i data-lucide="network" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900 mb-1">Distributed Edge AI & SBC Clusters</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Distributed pipeline inference across single-board computers (Raspberry Pi 5 clusters) and embedded GPU/edge accelerators.
+            </p>
+          </div>
+
+          <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm">
+            <div class="w-9 h-9 rounded-lg bg-cyan-50 text-cyan-700 flex items-center justify-center mb-3">
+              <i data-lucide="eye" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900 mb-1">Vision-Language Models (VLMs)</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Multimodal architectures (Qwen-VL, Qwen2.5-VL-3B-Instruct), cross-modal routing, and vision-token compression.
+            </p>
+          </div>
+
+          <div class="bg-white p-5 rounded-xl border border-slate-200/80 shadow-sm">
+            <div class="w-9 h-9 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center mb-3">
+              <i data-lucide="layers" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-sm font-bold text-slate-900 mb-1">Mixture-of-Experts (MoE) Architectures</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Top-1 gating functions, dynamic expert selection under distributional shift, and minimal routing overhead algorithms.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Key Research Highlights / Metrics Banner -->
+    <section class="bg-slate-900 text-white rounded-2xl p-8 shadow-sm">
+      <h3 class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-6">Research Highlights & Benchmark Results</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div>
+          <div class="text-3xl font-extrabold text-blue-400 font-mono">48.55 ms</div>
+          <div class="text-xs text-slate-300 mt-1">Latency on Raspberry Pi Cluster</div>
+        </div>
+        <div>
+          <div class="text-3xl font-extrabold text-emerald-400 font-mono">1.80×</div>
+          <div class="text-xs text-slate-300 mt-1">Inference Speedup vs Dense</div>
+        </div>
+        <div>
+          <div class="text-3xl font-extrabold text-amber-400 font-mono">5.20 ms</div>
+          <div class="text-xs text-slate-300 mt-1">Top-1 Routing Overhead</div>
+        </div>
+        <div>
+          <div class="text-3xl font-extrabold text-purple-400 font-mono">3-Node</div>
+          <div class="text-xs text-slate-300 mt-1">Distributed Pi 5 SBC Cluster</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="space-y-6">
+      <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+        <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+          <i data-lucide="file-text" class="w-5 h-5 text-blue-700"></i>
+          Publications & Preprints
+        </h2>
+        <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-100 text-slate-600">3 Papers</span>
+      </div>
+
+      <div class="space-y-4">
+        
+        <!-- Publication 1 (ICCAI 2026 - Best Presentation Award) -->
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm relative hover:border-blue-300 transition-all">
+          <div class="flex flex-wrap items-center gap-2 mb-2">
+            <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-amber-100 text-amber-900 border border-amber-200 flex items-center gap-1">
+              <i data-lucide="trophy" class="w-3.5 h-3.5 text-amber-600"></i> Best Presentation Award
+            </span>
+            <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-purple-100 text-purple-900">
+              Rated "Highly Innovative"
+            </span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-100 text-slate-700">Conference Paper [C2]</span>
+            <span class="text-xs text-slate-400">ACM (Scopus, EI Compendex)</span>
+          </div>
+
+          <h3 class="text-base font-bold text-slate-900 leading-snug">
+            Mixture of Tiny Experts for Resource-Constrained Vision–Language Models on Single-Board Computer Clusters
+          </h3>
+
+          <p class="text-xs text-slate-700 mt-2 font-serif">
+            <strong>Muhammad Ashir</strong>, H. Madokoro, and S. Nix.
+          </p>
+
+          <p class="text-xs text-slate-500 mt-1 italic">
+            Proceedings of the 12th International Conference on Computing and Artificial Intelligence (ICCAI 2026), Okinawa, Japan, Apr. 2026. Published by ACM.
+          </p>
+
+          <div class="mt-4 flex flex-wrap items-center gap-3 pt-3 border-t border-slate-100 text-xs">
+            <button class="text-blue-700 hover:text-blue-900 font-semibold flex items-center gap-1 toggle-bibtex" data-target="bibtex-c2">
+              <i data-lucide="code" class="w-3.5 h-3.5"></i> Show BibTeX
+            </button>
+          </div>
+
+          <pre id="bibtex-c2" class="hidden mt-3 p-3 rounded-lg bg-slate-900 text-slate-200 font-mono text-[11px] overflow-x-auto">
+@inproceedings{ashir2026mote,
+  title={Mixture of Tiny Experts for Resource-Constrained Vision--Language Models on Single-Board Computer Clusters},
+  author={Ashir, Muhammad and Madokoro, Hirokazu and Nix, Stephanie},
+  booktitle={Proceedings of the 12th International Conference on Computing and Artificial Intelligence (ICCAI 2026)},
+  publisher={ACM},
+  address={Okinawa, Japan},
+  year={2026}
+}</pre>
+        </div>
+
+        <!-- Publication 2 (SI2025 - Outstanding Presentation Award) -->
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm relative hover:border-blue-300 transition-all">
+          <div class="flex flex-wrap items-center gap-2 mb-2">
+            <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-amber-100 text-amber-900 border border-amber-200 flex items-center gap-1">
+              <i data-lucide="award" class="w-3.5 h-3.5 text-amber-600"></i> Outstanding Presentation Award
+            </span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-100 text-slate-700">Conference Paper [C1]</span>
+            <span class="text-xs text-slate-400">SICE SI2025</span>
+          </div>
+
+          <h3 class="text-base font-bold text-slate-900 leading-snug">
+            Optimization and Implementation of Qwen-VL on a Single-Board Cluster Computer
+          </h3>
+
+          <p class="text-xs text-slate-700 mt-2 font-serif">
+            <strong>A. Muhammad</strong>, H. Madokoro, and S. Nix.
+          </p>
+
+          <p class="text-xs text-slate-500 mt-1 italic">
+            Proceedings of SI2025 — 26th Annual Conference of SICE Systems Integration Division, Hiroshima, Japan, pp. 203–204, Dec. 2025.
+          </p>
+
+          <div class="mt-4 flex flex-wrap items-center gap-3 pt-3 border-t border-slate-100 text-xs">
+            <button class="text-blue-700 hover:text-blue-900 font-semibold flex items-center gap-1 toggle-bibtex" data-target="bibtex-c1">
+              <i data-lucide="code" class="w-3.5 h-3.5"></i> Show BibTeX
+            </button>
+          </div>
+
+          <pre id="bibtex-c1" class="hidden mt-3 p-3 rounded-lg bg-slate-900 text-slate-200 font-mono text-[11px] overflow-x-auto">
+@inproceedings{muhammad2025optimization,
+  title={Optimization and Implementation of Qwen-VL on a Single-Board Cluster Computer},
+  author={Muhammad, Ashir and Madokoro, Hirokazu and Nix, Stephanie},
+  booktitle={Proceedings of SI2025 - 26th Annual Conference of SICE Systems Integration Division},
+  pages={203--204},
+  address={Hiroshima, Japan},
+  year={2025}
+}</pre>
+        </div>
+
+        <!-- Publication 3 (Journal - In Preparation) -->
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm relative">
+          <div class="flex flex-wrap items-center gap-2 mb-2">
+            <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-blue-100 text-blue-900 border border-blue-200">
+              Journal Paper [J1 — In Preparation]
+            </span>
+            <span class="text-xs text-slate-500 font-semibold">Target Venue: IEEE Access (Submission: Sept 2026)</span>
+          </div>
+
+          <h3 class="text-base font-bold text-slate-900 leading-snug">
+            Lightweight Edge AI for Vision-Language Models: A Mixture of Tiny Experts Approach for Distributed Inference on Single Board Computer Clusters
+          </h3>
+
+          <p class="text-xs text-slate-700 mt-2 font-serif">
+            <strong>Muhammad Ashir</strong>, H. Madokoro, and S. Nix.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="space-y-6">
+      <div class="border-b border-slate-200 pb-3">
+        <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+          <i data-lucide="graduation-cap" class="w-5 h-5 text-blue-700"></i>
+          Education
+        </h2>
+      </div>
+
+      <div class="space-y-6">
+        
+        <!-- Master's -->
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm relative">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+            <h3 class="text-base font-bold text-slate-900">M.S. in Software and Information Science (Expected)</h3>
+            <span class="text-xs font-semibold text-slate-500 font-mono">Apr 2025 – Mar 2027</span>
+          </div>
+          <div class="text-xs font-semibold text-blue-800">
+            Iwate Prefectural University, Graduate School of Software and Information Science — Iwate, Japan
+          </div>
+          <div class="mt-3 space-y-1.5 text-xs text-slate-600">
+            <p><strong>Thesis:</strong> Optimization and Implementation of Vision–Language Models on Single-Board Computer Clusters</p>
+            <p><strong>Advisors:</strong> Prof. Hirokazu Madokoro & Prof. Stephanie Nix</p>
+            <p><strong>Funding:</strong> <span class="text-emerald-700 font-semibold">MEXT (Japanese Government) Scholarship</span> — Full tuition waiver and monthly stipend.</p>
+            <p><strong>Evaluation:</strong> Coursework graded <em>Very Good</em> under official grading scale.</p>
+          </div>
+        </div>
+
+        <!-- Bachelor's -->
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm relative">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+            <h3 class="text-base font-bold text-slate-900">B.S. in Information Technology</h3>
+            <span class="text-xs font-semibold text-slate-500 font-mono">Sep 2017 – Sep 2021</span>
+          </div>
+          <div class="text-xs font-semibold text-blue-800">
+            Government College University Faisalabad — Faisalabad, Pakistan
+          </div>
+          <div class="mt-3 space-y-1.5 text-xs text-slate-600">
+            <p><strong>CGPA:</strong> 3.20 / 4.00</p>
+            <p><strong>Final-Year Project:</strong> Human–Computer Interaction on a Food Menu Application and Website</p>
+            <p><strong>Relevant Coursework:</strong> Artificial Intelligence, Discrete Mathematics, Linear Algebra, Calculus, Probability & Statistics, Cloud Computing, Computer Networks, Database Systems, Software Engineering, Object-Oriented Analysis & Design, Web Development.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Research Experience -->
+    <section id="experience" class="space-y-6">
+      <div class="border-b border-slate-200 pb-3">
+        <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+          <i data-lucide="flask-conical" class="w-5 h-5 text-blue-700"></i>
+          Research Experience
+        </h2>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+          <div>
+            <h3 class="text-base font-bold text-slate-900">Graduate Researcher</h3>
+            <span class="text-xs font-semibold text-blue-800">Madokoro & Nix Laboratory — Iwate Prefectural University, Japan</span>
+          </div>
+          <span class="text-xs font-semibold text-slate-500 font-mono">Sep 2024 – Present</span>
+        </div>
+
+        <ul class="space-y-2 text-xs text-slate-700 list-disc list-outside pl-4 leading-relaxed">
+          <li><strong>MoTE-VLM Framework Design:</strong> Designed and implemented a distributed Mixture-of-Experts framework deploying Qwen2.5-VL-3B-Instruct across a 3-node Raspberry Pi 5 cluster using custom TinyExpert modules with top-1 routing.</li>
+          <li><strong>Edge Benchmarking & Acceleration:</strong> Demonstrated feasibility of billion-parameter vision–language model inference on commodity hardware, achieving <strong>48.55 ms latency</strong> and <strong>1.80× speedup</strong> with only <strong>5.20 ms routing overhead</strong>.</li>
+          <li><strong>Distributional Shift Verification:</strong> Conducted a routing-stability verification study on COCO dataset to validate expert-selection consistency under distributional shift.</li>
+          <li><strong>Full Pipeline Leadership:</strong> Independently led the full research pipeline — literature review, system design, implementation, experimental evaluation, and manuscript preparation in LaTeX (ACM sigconf and IEEEtran).</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Awards and Honours -->
+    <section id="awards" class="space-y-6">
+      <div class="border-b border-slate-200 pb-3">
+        <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+          <i data-lucide="trophy" class="w-5 h-5 text-blue-700"></i>
+          Honours & Awards
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3.5">
+          <div class="w-8 h-8 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+            <i data-lucide="award" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <h4 class="text-xs font-bold text-slate-900">Best Presentation Award</h4>
+            <p class="text-[11px] text-slate-600 mt-0.5">12th International Conference on Computing and Artificial Intelligence (ICCAI 2026), Okinawa, Japan</p>
+          </div>
+        </div>
+
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3.5">
+          <div class="w-8 h-8 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+            <i data-lucide="award" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <h4 class="text-xs font-bold text-slate-900">Outstanding Research Presentation Award</h4>
+            <p class="text-[11px] text-slate-600 mt-0.5">SI2025 Hiroshima — SICE Systems Integration Division (Dec 2025)</p>
+          </div>
+        </div>
+
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3.5">
+          <div class="w-8 h-8 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+            <i data-lucide="sparkles" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <h4 class="text-xs font-bold text-slate-900">“Highly Innovative” Paper Rating</h4>
+            <p class="text-[11px] text-slate-600 mt-0.5">Awarded during peer review by conference review committee at ICCAI 2026</p>
+          </div>
+        </div>
+
+        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex items-start gap-3.5">
+          <div class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+            <i data-lucide="check-circle" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <h4 class="text-xs font-bold text-slate-900">MEXT Japanese Government Scholarship</h4>
+            <p class="text-[11px] text-slate-600 mt-0.5">Competitive fully funded master's scholarship awarded by the Government of Japan (2025–2027)</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Technical Skills & Languages -->
+    <section class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+      
+      <!-- Technical Skills -->
+      <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
+        <h3 class="text-sm font-bold text-slate-900 flex items-center gap-2">
+          <i data-lucide="terminal" class="w-4 h-4 text-blue-700"></i> Technical Expertise
+        </h3>
+        <div class="space-y-2.5 text-xs text-slate-700">
+          <div><strong class="text-slate-900">Languages:</strong> Python (primary), C++, SQL, Bash</div>
+          <div><strong class="text-slate-900">ML / Deep Learning:</strong> PyTorch, Hugging Face Transformers, Qwen-VL, Qwen2.5-VL, Mixture-of-Experts, Quantization, Multimodal AI</div>
+          <div><strong class="text-slate-900">Systems & Hardware:</strong> Raspberry Pi Clusters, Distributed Inference, Linux System Administration, Edge GPU Deployment</div>
+          <div><strong class="text-slate-900">Tools:</strong> Git/GitHub, LaTeX (IEEEtran & ACM sigconf), Linux Shell</div>
+        </div>
+      </div>
+
+      <!-- Academic Languages -->
+      <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
+        <h3 class="text-sm font-bold text-slate-900 flex items-center gap-2">
+          <i data-lucide="languages" class="w-4 h-4 text-blue-700"></i> Languages
+        </h3>
+        <div class="space-y-3 text-xs text-slate-700">
+          <div class="flex items-center justify-between">
+            <span class="font-bold text-slate-900">English</span>
+            <span class="text-slate-500">CEFR B2 — Full Professional Proficiency</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="font-bold text-slate-900">Japanese</span>
+            <span class="text-slate-500">CEFR A2 — Daily & Academic Conversation</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="font-bold text-slate-900">Urdu</span>
+            <span class="text-slate-500">Native Speaker</span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Academic References Section -->
+    <section id="references" class="space-y-6">
+      <div class="border-b border-slate-200 pb-3">
+        <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+          <i data-lucide="users" class="w-5 h-5 text-blue-700"></i>
+          Academic References
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        
+        <!-- Ref 1 -->
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-2">
+          <h3 class="text-sm font-bold text-slate-900">Prof. Hirokazu Madokoro</h3>
+          <p class="text-xs text-slate-500">Faculty of Software and Information Science</p>
+          <p class="text-xs text-blue-800 font-semibold">Iwate Prefectural University, Japan</p>
+          <div class="pt-2 text-xs">
+            <a href="mailto:hirokazu_m@iwate-pu.ac.jp" class="text-blue-700 hover:underline font-mono">hirokazu_m@iwate-pu.ac.jp</a>
+          </div>
+        </div>
+
+        <!-- Ref 2 -->
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-2">
+          <h3 class="text-sm font-bold text-slate-900">Prof. Stephanie Nix</h3>
+          <p class="text-xs text-slate-500">Faculty of Software and Information Science</p>
+          <p class="text-xs text-blue-800 font-semibold">Iwate Prefectural University, Japan</p>
+          <div class="pt-2 text-xs">
+            <a href="mailto:nix_s@iwate-pu.ac.jp" class="text-blue-700 hover:underline font-mono">nix_s@iwate-pu.ac.jp</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 mt-20 py-8 bg-white text-center text-xs text-slate-400">
+    <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>&copy; 2026 Muhammad Ashir &bull; Academic Homepage</div>
+      <div class="flex items-center gap-4">
+        <a href="https://orcid.org/0009-0003-3220-7874" target="_blank" class="hover:text-blue-700">ORCID</a>
+        <a href="mailto:ashirmushtaq1234@gmail.com" class="hover:text-blue-700">Email</a>
+        <a href="#about" class="hover:text-blue-700">Back to Top &uarr;</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
