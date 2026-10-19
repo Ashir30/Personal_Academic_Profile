@@ -53,11 +53,6 @@
     ::selection { background-color: #dbeafe; color: #0f2042; }
     .bibtex-toggle { display: none; }
     .bibtex-toggle.active { display: block; }
-    .badge-gold {
-      background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
-      border: 1px solid #fcd34d;
-      color: #92400e;
-    }
   </style>
 </head>
 <body class="bg-[#fbfbfd] text-slate-800 font-sans antialiased selection:bg-blue-100 selection:text-ivy-900 border-t-4 border-ivy-700">
@@ -72,13 +67,13 @@
       </a>
 
       <!-- Desktop Navigation -->
-      <nav class="hidden md:flex items-center gap-6 text-xs font-semibold uppercase tracking-wider text-slate-600">
+      <nav class="hidden md:flex items-center gap-7 text-xs font-semibold uppercase tracking-wider text-slate-600">
         <a href="#about" class="hover:text-ivy-700 transition-colors">About</a>
-        <a href="#research" class="hover:text-ivy-700 transition-colors">Research</a>
+        <a href="#research" class="hover:text-ivy-700 transition-colors">Research Projects</a>
         <a href="#publications" class="hover:text-ivy-700 transition-colors">Publications</a>
         <a href="#awards" class="hover:text-ivy-700 transition-colors">Awards</a>
-        <a href="#transcript" class="hover:text-ivy-700 transition-colors">Transcript & Verification</a>
         <a href="#education" class="hover:text-ivy-700 transition-colors">Education</a>
+        <a href="#skills" class="hover:text-ivy-700 transition-colors">Skills</a>
         <a href="#references" class="hover:text-ivy-700 transition-colors">References</a>
       </nav>
 
@@ -95,7 +90,7 @@
 
   <main class="max-w-5xl mx-auto px-6 py-10 space-y-16">
 
-    <!-- Bio & Ph.D. Applicant Identity Section -->
+    <!-- Bio & Ph.D. Profile Hero Section -->
     <section id="about" class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
       
       <!-- Left Column: Academic Profile Card -->
@@ -156,24 +151,24 @@
           </div>
         </div>
 
-        <!-- Academic Distinction Box -->
+        <!-- Academic Standing Summary -->
         <div class="border-t border-slate-100 pt-4 text-xs space-y-2">
-          <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">Verified Academic Standing</span>
+          <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">Academic Standing</span>
           <div class="flex items-center justify-between">
-            <span class="text-slate-600">M.S. CGPA (Converted):</span>
-            <strong class="text-slate-900 font-mono font-bold">3.71 / 4.00</strong>
+            <span class="text-slate-600">M.S. CGPA:</span>
+            <strong class="text-slate-900 font-mono font-bold text-sm">3.71 / 4.00</strong>
           </div>
           <div class="flex items-center justify-between">
             <span class="text-slate-600">Official Japanese Scale:</span>
             <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-50 text-emerald-800 border border-emerald-200">Very Good (Yu) &rarr; A</span>
           </div>
           <div class="flex items-center justify-between">
-            <span class="text-slate-600">Student ID / Doc No.:</span>
-            <span class="font-mono text-[11px] text-slate-600 font-medium">2312025001 &middot; No. 21-6</span>
+            <span class="text-slate-600">Fellowship Funding:</span>
+            <span class="font-semibold text-slate-800">MEXT Full Scholarship</span>
           </div>
           <div class="flex items-center justify-between">
-            <span class="text-slate-600">Funding:</span>
-            <span class="font-semibold text-slate-800">MEXT Full Scholarship</span>
+            <span class="text-slate-600">Expected Completion:</span>
+            <span class="font-mono text-slate-800 font-semibold">March 2027</span>
           </div>
         </div>
 
@@ -337,148 +332,6 @@
         </p>
       </div>
 
-    </section>
-
-    <!-- Verified Academic Credentials & Transcript Section -->
-    <section id="transcript" class="space-y-6">
-      <div class="border-b border-slate-200 pb-3 flex items-end justify-between">
-        <div>
-          <span class="text-xs font-bold uppercase tracking-widest text-ivy-700 block">Verified Official Records</span>
-          <h2 class="text-2xl font-serif font-bold text-slate-900">Academic Records & Coursework Breakdown</h2>
-        </div>
-        <span class="text-xs text-slate-500 font-mono">Official Transcript No. 21-6</span>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
-        
-        <!-- Official Verification Cards (Left) -->
-        <div class="md:col-span-5 space-y-4">
-          
-          <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
-            <h3 class="font-bold text-sm text-slate-900 uppercase tracking-wider flex items-center gap-2">
-              <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i>
-              <span>Official Institutional Certificates</span>
-            </h3>
-
-            <!-- Certificate 1: Best Presentation ICCAI 2026 -->
-            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200/90 text-xs space-y-1">
-              <div class="flex items-center justify-between">
-                <strong class="text-slate-900 font-semibold">ICCAI 2026 Best Presentation</strong>
-                <span class="font-mono text-[10px] text-amber-800 bg-amber-50 px-2 py-0.5 rounded font-bold">Paper ID: NA0281</span>
-              </div>
-              <p class="text-slate-500 text-[11px]">Conferred by 12th International Conference Committee, Okinawa, Japan (Apr 2026).</p>
-            </div>
-
-            <!-- Certificate 2: SI2025 表彰状 -->
-            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200/90 text-xs space-y-1">
-              <div class="flex items-center justify-between">
-                <strong class="text-slate-900 font-semibold">SI2025 優秀講演賞 (Award Certificate)</strong>
-                <span class="font-mono text-[10px] text-slate-600 bg-slate-200 px-2 py-0.5 rounded font-bold">Feb 16, 2026</span>
-              </div>
-              <p class="text-slate-500 text-[11px]">Official 表彰状 awarded by SICE Systems Integration Division (President Suzuki Atsuto / Comm. Chair Awata Yuichi).</p>
-            </div>
-
-            <!-- Certificate 3: Expected Graduation -->
-            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200/90 text-xs space-y-1">
-              <div class="flex items-center justify-between">
-                <strong class="text-slate-900 font-semibold">Certificate of Expected Graduation</strong>
-                <span class="font-mono text-[10px] text-ivy-700 bg-blue-50 px-2 py-0.5 rounded font-bold">Cert. No. 1</span>
-              </div>
-              <p class="text-slate-500 text-[11px]">Official issue by Iwate Prefectural University. Expected completion: <strong>March 16, 2027</strong>.</p>
-            </div>
-
-          </div>
-
-          <div class="p-4 rounded-xl bg-blue-50/70 border border-blue-200 text-xs text-slate-700 space-y-1">
-            <span class="font-bold text-slate-900 block flex items-center gap-1.5">
-              <i data-lucide="file-text" class="w-3.5 h-3.5 text-blue-700"></i>
-              Transcript & Certificate Verification
-            </span>
-            <p class="text-[11px] leading-relaxed text-slate-600">
-              Original Japanese transcripts, English certified translations (Document No. 21-6), and recommendation letters from Prof. Madokoro and Prof. Nix are available immediately upon request.
-            </p>
-          </div>
-
-        </div>
-
-        <!-- Coursework Breakdown (Right) -->
-        <div class="md:col-span-7 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-5">
-          <div class="flex items-center justify-between border-b border-slate-100 pb-3">
-            <div>
-              <h3 class="font-bold text-sm text-slate-900 uppercase tracking-wider">
-                M.S. Academic Transcript (AI Course)
-              </h3>
-              <p class="text-[11px] text-slate-500">Iwate Prefectural University &middot; CGPA: <strong>3.71 / 4.00</strong></p>
-            </div>
-            <span class="px-2.5 py-1 rounded text-xs font-mono font-bold bg-emerald-50 text-emerald-800 border border-emerald-300">
-              Grade: Very Good &rarr; A
-            </span>
-          </div>
-
-          <!-- Subjects List -->
-          <div class="space-y-4 text-xs">
-            
-            <!-- AI & Machine Learning -->
-            <div>
-              <span class="font-bold uppercase tracking-wider text-[10px] text-ivy-700 block mb-1.5">Artificial Intelligence & Machine Learning</span>
-              <div class="space-y-1.5">
-                <div class="flex items-center justify-between p-2 rounded-lg bg-slate-50 border border-slate-100">
-                  <span class="font-medium text-slate-800">Special Topics in Machine Learning and Applications</span>
-                  <span class="font-mono font-bold text-emerald-700">Very Good (Yu)</span>
-                </div>
-                <div class="flex items-center justify-between p-2 rounded-lg bg-slate-50 border border-slate-100">
-                  <span class="font-medium text-slate-800">Special Topics in Machine Intelligence</span>
-                  <span class="font-mono font-bold text-emerald-700">Very Good (Yu)</span>
-                </div>
-                <div class="flex items-center justify-between p-2 rounded-lg bg-slate-50 border border-slate-100">
-                  <span class="font-medium text-slate-800">Special Topics in Brain Information Processing</span>
-                  <span class="font-mono font-bold text-emerald-700">Very Good (Yu)</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Systems & Engineering -->
-            <div>
-              <span class="font-bold uppercase tracking-wider text-[10px] text-ivy-700 block mb-1.5">Systems, Sensing & Mathematics</span>
-              <div class="space-y-1.5">
-                <div class="flex items-center justify-between p-2 rounded-lg bg-slate-50 border border-slate-100">
-                  <span class="font-medium text-slate-800">Special Topics in Computational Mechanics</span>
-                  <span class="font-mono font-bold text-amber-700 bg-amber-50 px-1.5 py-0.5 rounded">Excellent (Shu: 90-100)</span>
-                </div>
-                <div class="flex items-center justify-between p-2 rounded-lg bg-slate-50 border border-slate-100">
-                  <span class="font-medium text-slate-800">Special Topics in Sensing & HCI</span>
-                  <span class="font-mono font-bold text-emerald-700">Very Good (Yu)</span>
-                </div>
-                <div class="flex items-center justify-between p-2 rounded-lg bg-slate-50 border border-slate-100">
-                  <span class="font-medium text-slate-800">Special Topics in Discrete System Simulation</span>
-                  <span class="font-mono font-bold text-emerald-700">Very Good (Yu)</span>
-                </div>
-                <div class="flex items-center justify-between p-2 rounded-lg bg-slate-50 border border-slate-100">
-                  <span class="font-medium text-slate-800">Special Topics in Mobile Communication Networks</span>
-                  <span class="font-mono font-bold text-slate-600">Good (Ryo)</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Research & Seminars -->
-            <div>
-              <span class="font-bold uppercase tracking-wider text-[10px] text-ivy-700 block mb-1.5">Scientific Communication & Seminars</span>
-              <div class="space-y-1.5">
-                <div class="flex items-center justify-between p-2 rounded-lg bg-slate-50 border border-slate-100">
-                  <span class="font-medium text-slate-800">Science Communication</span>
-                  <span class="font-mono font-bold text-amber-700 bg-amber-50 px-1.5 py-0.5 rounded">Excellent (Shu: 90-100)</span>
-                </div>
-                <div class="flex items-center justify-between p-2 rounded-lg bg-slate-50 border border-slate-100">
-                  <span class="font-medium text-slate-800">Software & Information Science Seminar I & II</span>
-                  <span class="font-mono font-bold text-slate-700">Pass (Go)</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
     </section>
 
     <!-- Publications Section -->
@@ -771,7 +624,7 @@
           </div>
 
           <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 text-[11px] text-slate-500 text-center">
-            <em>Letters of recommendation available upon request from both advisors.</em>
+            <em>Letters of recommendation, official degree certificates, and transcripts available upon request.</em>
           </div>
 
         </div>
