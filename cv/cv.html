@@ -1,97 +1,133 @@
 <!DOCTYPE html>
 <!-- Source for Muhammad_Ashir_CV.pdf (public web version: phone number omitted).
-     Regenerate: msedge --headless --no-pdf-header-footer --print-to-pdf=Muhammad_Ashir_CV.pdf cv/cv.html -->
+     Every claim here is traceable to the papers, transcripts, or certificates; keep it that way.
+     Regenerate: msedge --headless --no-pdf-header-footer --print-to-pdf=Muhammad_Ashir_CV.pdf cv/cv.html
+     Application copy: replace <!--PHONE--> with " | <phone>" in a temporary copy before printing (never commit the number). -->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>Muhammad Ashir — CV</title>
 <style>
-  @page { size: Letter; margin: 0.6in 0.65in; }
+  @page { size: Letter; margin: 0.55in 0.6in; }
   * { box-sizing: border-box; }
-  body { font-family: Calibri, Carlito, "Segoe UI", Arial, sans-serif; font-size: 10.5pt; line-height: 1.35; color: #111; margin: 0; }
-  h1 { text-align: center; color: #1f3a68; font-size: 20pt; letter-spacing: 0.5px; margin: 0 0 2px; }
-  .contact { text-align: center; color: #555; font-size: 9pt; margin-bottom: 10px; }
-  .contact a { color: #555; text-decoration: none; }
-  h2 { break-after: avoid; color: #1f3a68; font-size: 11.5pt; text-transform: uppercase; border-bottom: 1px solid #333; padding-bottom: 1px; margin: 12px 0 5px; }
-  p { margin: 0 0 5px; }
+  body { font-family: Calibri, Carlito, "Segoe UI", Arial, sans-serif; font-size: 10.3pt; line-height: 1.32; color: #111; margin: 0; }
+  a { color: inherit; text-decoration: none; }
+  h1 { text-align: center; color: #1f3a68; font-size: 20pt; letter-spacing: 0.5px; margin: 0 0 1px; }
+  .tagline { text-align: center; color: #1f3a68; font-size: 10pt; margin-bottom: 3px; }
+  .contact { text-align: center; color: #555; font-size: 8.8pt; margin-bottom: 8px; }
+  h2 { break-after: avoid; color: #1f3a68; font-size: 11pt; text-transform: uppercase; letter-spacing: 0.3px; border-bottom: 1px solid #333; padding-bottom: 1px; margin: 10px 0 4px; }
+  p { margin: 0 0 4px; }
   .row { display: flex; justify-content: space-between; gap: 12px; }
-  .row b { font-weight: 700; }
   .date { color: #555; white-space: nowrap; }
-  .inst { font-style: italic; color: #444; margin-bottom: 4px; }
-  ul { margin: 2px 0 6px; padding-left: 20px; }
-  li { margin-bottom: 3px; }
-  section { break-inside: auto; }
-  .entry { break-inside: avoid; margin-bottom: 6px; }
+  .inst { font-style: italic; color: #444; margin-bottom: 3px; }
+  .proj { font-weight: 700; margin: 5px 0 1px; }
+  ul { margin: 1px 0 5px; padding-left: 18px; }
+  li { margin-bottom: 2px; break-inside: avoid; }
+  .proj { break-after: avoid; }
+  .entry { break-inside: avoid; margin-bottom: 5px; }
+  .muted { color: #555; }
+  .kv b { display: inline-block; min-width: 0; }
 </style>
 </head>
 <body>
 <h1>MUHAMMAD ASHIR</h1>
+<div class="tagline">Efficient Machine Learning &middot; Systems for AI &middot; Multimodal Foundation Models &middot; Embodied Perception</div>
 <div class="contact">
-  ashirmushtaq1234@gmail.com | Morioka, Iwate, Japan | ORCID: 0009-0003-3220-7874 |
-  <a href="https://ashir30.github.io/Personal_Academic_Profile/">ashir30.github.io/Personal_Academic_Profile</a>
+  ashirmushtaq1234@gmail.com<!--PHONE--> | Morioka, Iwate, Japan |
+  <a href="https://ashir30.github.io/Personal_Academic_Profile/">ashir30.github.io/Personal_Academic_Profile</a> |
+  <a href="https://github.com/Ashir30">github.com/Ashir30</a> | ORCID 0009-0003-3220-7874
 </div>
 
-<h2>Research Profile</h2>
-<p>Award-winning MS researcher building efficient, distributed vision-language systems. My work applying and extending Mixture-of-Experts (MoE) to edge inference won Best Presentation at ICCAI 2026 (ACM) and was the first of its kind deployed across a distributed single-board-computer cluster.</p>
-<p>My research interests span LLMs, efficient machine learning, deep learning, distributed &amp; edge AI (on-device inference, multi-node deployment), multimodal AI, and trustworthy &amp; reliable AI. I work at the intersection of these areas to build real-world deployable AI systems.</p>
+<div class="entry">
+<h2>Research Interests</h2>
+<p>I study how to make large multimodal models run where they are needed: on small, distributed, resource-constrained hardware. My work so far combines Mixture-of-Experts design, quantization, and distributed edge inference for vision-language models, measured on real single-board-computer clusters. For my Ph.D. I am interested in:</p>
+<ul>
+  <li><b>Efficient multimodal foundation models</b> &mdash; sparse Mixture-of-Experts, routing, parameter-efficient adaptation, knowledge distillation.</li>
+  <li><b>Systems for ML</b> &mdash; distributed and decentralized inference across heterogeneous edge devices; memory, communication, and scheduling bottlenecks.</li>
+  <li><b>Model compression</b> &mdash; low-bit quantization for vision-language models, especially for cross-attention and vision tokens.</li>
+  <li><b>Embodied AI</b> &mdash; efficient vision-language perception for robots operating in degraded or hazardous environments.</li>
+</ul>
+</div>
 
 <h2>Education</h2>
 <div class="entry">
-  <div class="row"><b>M.S. in Software and Information Science (expected)</b><span class="date">Apr 2025 – Mar 2027</span></div>
+  <div class="row"><b>M.S. in Software and Information Science (AI Course)</b><span class="date">Apr 2025 – Mar 2027 (expected)</span></div>
   <div class="inst">Iwate Prefectural University, Graduate School of Software and Information Science — Iwate, Japan</div>
-  <p>Thesis: Optimization and Implementation of Vision-Language Models on Single-Board Computer Clusters</p>
-  <p>Advisors: Prof. Hirokazu Madokoro &amp; Prof. Stephanie Nix. Funding: MEXT (Japanese Government) Scholarship — full tuition and stipend.</p>
-  <p>CGPA: 3.71/4.0 (converted from official transcript per Scholaro's Japan 4-scale-university grading table: Very Good → A, Good → B; credit-weighted).</p>
+  <p>Thesis: <i>Optimization and Implementation of Vision-Language Models on Single-Board Computer Clusters</i>. Advisors: Prof. Hirokazu Madokoro, Prof. Stephanie Nix.</p>
+  <p>CGPA 3.71 / 4.00 (converted from official Japanese grades, credit-weighted; Excellent/Very Good &rarr; A, Good &rarr; B). Fully funded by the MEXT Japanese Government Scholarship.</p>
+  <p class="muted">Coursework: Machine Intelligence; Machine Learning and Applications; Brain Information Processing; Time Series Modeling and Prediction; Discrete System Simulation; Computational Mechanics; Sensing; HCI and Sensing.</p>
 </div>
 <div class="entry">
   <div class="row"><b>B.S. in Information Technology</b><span class="date">Sep 2017 – Sep 2021</span></div>
   <div class="inst">Government College University Faisalabad — Faisalabad, Pakistan</div>
-  <p>CGPA: 3.20/4.00.</p>
-  <p>Final-year project: Human Computer Interaction on a Food Menu Application and Website. Relevant coursework: Artificial Intelligence, Discrete Mathematics, Linear Algebra, Calculus, Probability &amp; Statistics, Cloud Computing, Computer Networks, Database Systems, Software Engineering, Object-Oriented Analysis &amp; Design, Web Development.</p>
+  <p>CGPA 3.20 / 4.00.</p>
+  <p class="muted">Coursework: Artificial Intelligence; Data Structures and Algorithms; Operating Systems; Computer Networks; Discrete Structures; Calculus and Analytical Geometry; Multivariable and Integral Calculus; Statistical Theory; Cloud Computing; Database Systems.</p>
 </div>
 
 <h2>Publications</h2>
 <ul>
-  <li>[C2] <b>Muhammad Ashir</b>, H. Madokoro, and S. Nix. “Mixture of Tiny Experts for Resource-Constrained Vision–Language Models on Single-Board Computer Clusters.” Proceedings of the 12th International Conference on Computing and Artificial Intelligence (ICCAI 2026), Okinawa, Japan, Apr. 2026. Published by ACM (Scopus, EI Compendex indexed). — Best Presentation Award; rated “Highly Innovative” by peer reviewers.</li>
-  <li>[C1] <b>A. Muhammad</b>, H. Madokoro, and S. Nix. “Optimization and Implementation of Qwen-VL on a Single-Board Cluster Computer.” Proceedings of SI2025 - 26th Annual Conference of SICE Systems Integration Division, Hiroshima, Japan, pp. 203–204, Dec. 2025. - Outstanding Presentation Award.</li>
-  <li>[J1 — In Preparation] <b>Muhammad Ashir</b>, H. Madokoro, and S. Nix. “Lightweight Edge AI for Vision-Language Models: A Mixture of Tiny Experts Approach for Distributed Inference on Single Board Computer Clusters.” Target venue: IEEE Access. Target submission: November 2026.</li>
+  <li>[J1] <b>M. Ashir</b>, H. Madokoro, and S. Nix. “Lightweight Edge AI for Vision-Language Models: A Mixture of Tiny Experts Approach for Distributed Inference on Single Board Computer Clusters.” <i>Manuscript in preparation for IEEE Access</i>, target submission Nov. 2026.</li>
+  <li>[C2] <b>M. Ashir</b>, H. Madokoro, and S. Nix. “Mixture of Tiny Experts for Resource-Constrained Vision–Language Models on Single-Board Computer Clusters.” In <i>Proc. 12th International Conference on Computing and Artificial Intelligence (ICCAI 2026)</i>, ACM, Okinawa, Japan, Apr. 2026. <b>Best Presentation Award</b>; reviewers rated the work highly innovative.</li>
+  <li>[C1] <b>M. Ashir</b>, H. Madokoro, and S. Nix. “Optimization and Implementation of Qwen-VL on Single Board Cluster Computers.” In <i>Proc. 26th SICE System Integration Division Annual Conference (SI2025)</i>, Hiroshima, Japan, pp. 203–204, Dec. 2025. <b>SI2025 Outstanding Presentation Award</b>.</li>
 </ul>
 
-<div class="entry">
-  <h2>Research Experience</h2>
-  <div class="row"><b>Graduate Researcher — Madokoro &amp; Nix Laboratory</b><span class="date">Sep 2024 – Present</span></div>
-  <div class="inst">Iwate Prefectural University, Morioka, Japan</div>
-  <ul>
-    <li>Designed and implemented MoTE-VLM - a distributed Mixture-of-Experts framework deploying Qwen2.5-VL-3B-Instruct across a 3-node Raspberry Pi 5 cluster using TinyExpert modules with top-1 routing.</li>
-    <li>Demonstrated feasibility of billion-parameter vision language model inference on commodity edge hardware, achieving 48.55 ms latency and 1.80× speedup with only 5.20 ms routing overhead.</li>
-    <li>Conducted a routing-stability verification study on COCO data to validate expert-selection consistency under distributional shift.</li>
-    <li>Independently led the full research pipeline literature review, system design, implementation, experimental evaluation, and manuscript preparation in LaTeX (ACM sigconf and IEEEtran), including proposing the MoE routing approach after initial dense-model deployment proved infeasible on Pi hardware.</li>
-  </ul>
+<h2>Research Experience</h2>
+<div class="row"><b>Graduate Researcher — Madokoro &amp; Nix Laboratory</b><span class="date">Sep 2024 – Present</span></div>
+<div class="inst">Iwate Prefectural University, Morioka, Japan</div>
+
+<div class="project">
+<div class="proj">MoTE-VLM: a fully GPU-free vision-language model on a Raspberry Pi cluster [J1]</div>
+<ul>
+  <li>Designed and trained a 206M-parameter VLM (frozen MobileNetV3-Small encoder with 49 spatial tokens, 12 transformer blocks, hash-routed Mixture of Tiny Experts) whose entire inference runs CPU-only on a four-node Raspberry Pi 5 cluster, one expert per node.</li>
+  <li>Two-stage training: caption alignment on COCO, then instruction tuning on answers distilled from a Qwen3-VL teacher. Reached <b>25.4 BLEU-4 / 70.4 CIDEr</b> on held-out COCO val2017 with no GPU at inference.</li>
+  <li>Ran controlled studies: a parameter-free hash router outperformed a learned router (70.4 vs. 45.7 CIDEr; the learned router collapsed onto one or two experts), and an iso-compute dense baseline matched the mixture's quality (paired bootstrap), showing that the mixture's value is memory partitioning rather than accuracy.</li>
+  <li>Characterized deployment trade-offs: INT8 post-training quantization made the model 2.7&times; smaller (309 MB) but only 1.1&times; faster on the Pi CPU (vs. 4.0&times; on x86); without a GPU, latency rose from 392 ms (1 node) to 630 ms (4 nodes), so distribution buys memory, not speed.</li>
+</ul>
 </div>
 
+<div class="project">
+<div class="proj">Distributed tiny experts for Qwen2.5-VL-3B on single-board computers [C2]</div>
+<ul>
+  <li>Built a hybrid edge pipeline: Qwen2.5-VL-3B on a workstation GPU, with ~2.1M-parameter TinyExpert modules executing CPU-only on three Raspberry Pi 5 nodes over TCP/Gigabit Ethernet with top-1 softmax routing and a load-balancing loss.</li>
+  <li>Reduced expert-stage latency from 87.24 ms (1 node) to 48.55 ms (3 nodes), a <b>1.80&times; speedup</b>; expert computation accounted for 81% of latency and expert load stayed within 15% of uniform.</li>
+</ul>
+</div>
+
+<div class="project">
+<div class="proj">Quantized VLM for nuclear decommissioning imagery [C1]</div>
+<ul>
+  <li>Applied BitsAndBytes 8-bit quantization to Qwen2.5-VL-3B-Instruct, reducing memory allocation from 9,344 MB to 3,915 MB, and evaluated descriptions of low-light, blurry inspection images from the Fukushima Daiichi decommissioning site. Supported by JAEA Grant JPJA23O23813888.</li>
+</ul>
+</div>
+<p class="muted">Across all projects I carried out the literature review, system design, implementation, experiments, and LaTeX manuscript preparation; the move to Mixture-of-Experts came from my finding that dense deployment was infeasible on Pi hardware.</p>
+
+<div class="entry">
 <h2>Honours and Awards</h2>
 <ul>
-  <li>Best Presentation Award, ICCAI 2026, 12th International Conference on Computing and Artificial Intelligence, Okinawa, Japan, Apr. 2026.</li>
-  <li>Outstanding Research Presentation Award, SI2025 Hiroshima, SICE Systems Integration Division, Feb. 2026.</li>
-  <li>“Highly Innovative” Rating, ICCAI 2026, awarded for the conference paper during peer review.</li>
-  <li>MEXT Japanese Government Scholarship, competitive, fully funded master's scholarship awarded by the Government of Japan, 2025.</li>
+  <li><b>Best Presentation Award</b>, ICCAI 2026 (12th International Conference on Computing and Artificial Intelligence), Okinawa, Japan, Apr. 2026.</li>
+  <li><b>SI2025 Outstanding Presentation Award</b> (優秀講演賞), SICE System Integration Division, Feb. 2026.</li>
+  <li><b>MEXT Japanese Government Scholarship</b>, full tuition and monthly stipend for graduate study, Apr. 2025 – Mar. 2027.</li>
 </ul>
+</div>
 
+
+<div class="entry">
 <h2>Technical Skills</h2>
-<p><b>Programming:</b> Python, C++</p>
-<p><b>ML / Deep Learning:</b> PyTorch, Hugging Face Transformers, Vision-Language Models, Large Language Models, Mixture-of-Experts architectures, model quantization and compression, multimodal AI, agentic AI systems</p>
-<p><b>Mathematics:</b> Discrete Mathematics, Linear Algebra, Calculus, Probability &amp; Statistics</p>
-<p><b>Systems &amp; Hardware:</b> Distributed inference on Raspberry Pi clusters, Linux system administration, GPU/edge deployment, single-board computer clusters</p>
-<p><b>Tools &amp; Workflow:</b> Git/GitHub, Linux shell, LaTeX (IEEEtran &amp; ACM sigconf), Bash scripting</p>
-<p><b>Research Skills:</b> Experimental design, performance profiling and benchmarking, scientific writing, peer-reviewed publication, conference presentation</p>
+<p class="kv"><b>Programming:</b> Python, C++, Bash</p>
+<p class="kv"><b>ML:</b> PyTorch, Hugging Face Transformers; vision-language models (Qwen2.5-VL, Qwen3-VL); Mixture-of-Experts (learned and hash routing, load balancing); quantization (BitsAndBytes, INT8 post-training); knowledge distillation</p>
+<p class="kv"><b>Systems:</b> Raspberry Pi 5 clusters, TCP socket-based distributed inference, Linux administration, latency and memory profiling</p>
+<p class="kv"><b>Tools:</b> Git/GitHub, LaTeX (IEEEtran, ACM sigconf)</p>
+</div>
 
+<div class="entry">
 <h2>Languages</h2>
-<p><b>English:</b> Independent user (CEFR B2); full professional working proficiency for research and academic writing.</p>
-<p><b>Japanese:</b> Basic user (CEFR A2) for daily and academic-environment conversation.</p>
-<p><b>Urdu:</b> Native speaker.</p>
+<p><b>English:</b> CEFR B2; research papers and conference talks in English. IELTS Academic scheduled for 14 Nov. 2026. &nbsp; <b>Japanese:</b> CEFR A2. &nbsp; <b>Urdu:</b> native.</p>
+</div>
 
+<div class="entry">
 <h2>References</h2>
-<p>Prof. Hirokazu Madokoro, Faculty of Software and Information Science, Iwate Prefectural University: hirokazu_m@iwate-pu.ac.jp</p>
-<p>Prof. Stephanie Nix, Faculty of Software and Information Science, Iwate Prefectural University: nix_s@iwate-pu.ac.jp</p>
+<p><b>Prof. Hirokazu Madokoro</b> (primary advisor), Faculty of Software and Information Science, Iwate Prefectural University — hirokazu_m@iwate-pu.ac.jp</p>
+<p><b>Prof. Stephanie Nix</b> (co-advisor), Faculty of Software and Information Science, Iwate Prefectural University — nix_s@iwate-pu.ac.jp</p>
+</div>
 </body>
 </html>
