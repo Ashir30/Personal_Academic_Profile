@@ -230,7 +230,7 @@
             </li>
             <li class="flex items-start gap-3">
               <span class="font-mono text-[11px] font-bold text-amber-800 bg-amber-50 px-2 py-0.5 rounded border border-amber-200 whitespace-nowrap">Feb 2026</span>
-              <span>Conferred official <strong class="text-slate-900">SI2025 Outstanding Presentation Award</strong> (表彰状) by SICE Systems Integration Division for Qwen-VL Fukushima reactor study (JAEA Grant JPJA23O23813888).</span>
+              <span>Conferred official <strong class="text-slate-900">SI2025 Outstanding Presentation Award</strong> (表彰状) by SICE Systems Integration Division for <em>"Optimization and Implementation of Qwen-VL on Single Board Cluster Computers"</em> (JAEA Grant JPJA23O23813888).</span>
             </li>
             <li class="flex items-start gap-3">
               <span class="font-mono text-[11px] font-bold text-slate-500 bg-slate-100 px-2 py-0.5 rounded border border-slate-200 whitespace-nowrap">Apr 2025</span>
@@ -248,241 +248,270 @@
       <div class="border-b border-slate-200 pb-3 flex items-end justify-between">
         <div>
           <span class="text-xs font-bold uppercase tracking-widest text-ivy-700 block">Empirical Engineering</span>
-          <h2 class="text-2xl font-serif font-bold text-slate-900">Selected Research Projects</h2>
+          <h2 class="text-2xl font-serif font-bold text-slate-900">Featured Research Projects</h2>
+        </div>
+        <span class="text-xs text-slate-500 font-mono">Hardware Verified on RPi 5 Testbeds</span>
+      </div>
+
+      <!-- Project 1: MoTE-VLM on 4-Node Pi Cluster -->
+      <div class="bg-white p-7 rounded-2xl border border-slate-200 shadow-sm space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
+          <div>
+            <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-blue-50 border border-blue-200 text-ivy-800 text-xs font-bold">
+              <span>IEEE Access &middot; ICCAI 2026</span>
+            </div>
+            <h3 class="text-xl font-bold font-serif text-slate-900 mt-2">
+              MoTE-VLM: A Mixture of Tiny Experts for GPU-Free Distributed Inference on Single-Board Clusters
+            </h3>
+          </div>
+          <span class="text-xs font-mono font-semibold text-slate-500 bg-slate-100 px-3 py-1.5 rounded-lg self-start whitespace-nowrap">
+            206M Parameters &middot; 4-Node Cluster
+          </span>
+        </div>
+
+        <p class="text-sm text-slate-600 leading-relaxed">
+          Vision-Language Models typically require heavy workstation GPUs, placing them out of reach for power- and cost-constrained edge deployments. MoTE-VLM proposes a 206M-parameter architecture with a frozen MobileNetV3-Small encoder emitting 49 spatial vision tokens into a 12-layer transformer where standard FFNs are replaced by a hash-routed Mixture of Tiny Experts (MoTE). With top-1 routing, each token activates only <strong>&sim;45% of parameters (93M active)</strong>, allowing each Pi node to host a single expert slice (38 MB at INT8).
+        </p>
+
+        <!-- Benchmark Matrix Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 p-4 rounded-xl bg-slate-50 border border-slate-200 text-center font-mono">
+          <div>
+            <div class="text-2xl font-bold text-ivy-800 font-sans">70.4 CIDEr</div>
+            <div class="text-[10px] text-slate-500 uppercase font-sans mt-0.5">Captioning Quality (COCO)</div>
+          </div>
+          <div>
+            <div class="text-2xl font-bold text-emerald-700 font-sans">1.80&times;</div>
+            <div class="text-[10px] text-slate-500 uppercase font-sans mt-0.5">Speedup (3 SBC Nodes)</div>
+          </div>
+          <div>
+            <div class="text-2xl font-bold text-slate-900 font-sans">2.7&times; Compression</div>
+            <div class="text-[10px] text-slate-500 uppercase font-sans mt-0.5">INT8 Post-Training Quant</div>
+          </div>
+          <div>
+            <div class="text-2xl font-bold text-ivy-800 font-sans">0 GPUs Needed</div>
+            <div class="text-[10px] text-slate-500 uppercase font-sans mt-0.5">100% ARM CPU Inference</div>
+          </div>
+        </div>
+
+        <!-- Systems Finding -->
+        <div class="p-4 rounded-xl bg-slate-100/70 border border-slate-200 text-xs text-slate-700 space-y-1.5">
+          <strong class="text-slate-900 block font-semibold flex items-center gap-1.5">
+            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600"></i>
+            Key Systems Insight: The Reversal in the Role of Distribution
+          </strong>
+          <p class="leading-relaxed">
+            Our empirical evaluation revealed that without GPU acceleration, master CPU compute bounds latency (392 ms on 1 node vs 630 ms on 4 nodes due to serialized socket round-trips). Therefore, on CPU-only edge clusters, <strong>the primary contribution of MoE distribution is memory partitioning (enabling models too large for a single 8GB board to execute) rather than latency acceleration</strong>.
+          </p>
         </div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-        <!-- Project 1: MoTE-VLM -->
-        <article class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-4 hover:border-slate-300 transition-all">
-          <div class="space-y-3">
-            <div class="flex items-center justify-between text-xs">
-              <span class="font-mono font-bold text-ivy-700 bg-blue-50 px-2 py-0.5 rounded border border-blue-200">ICCAI 2026 &middot; IEEE Access Target</span>
-              <span class="text-slate-400">2025 &ndash; 2026</span>
+      <!-- Project 2: Real-World Nuclear Decommissioning Edge VLM -->
+      <div class="bg-white p-7 rounded-2xl border border-slate-200 shadow-sm space-y-5">
+        <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
+          <div>
+            <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-900 text-xs font-bold">
+              <span>SICE SI2025 &middot; JAEA Grant JPJA23O23813888</span>
             </div>
-            <h3 class="font-serif text-lg font-bold text-slate-900 leading-snug">
-              MoTE-VLM: Mixture-of-Tiny-Experts Vision-Language Model on Distributed Edge Clusters
+            <h3 class="text-xl font-bold font-serif text-slate-900 mt-2">
+              Optimization and Implementation of Qwen-VL on Single Board Cluster Computers
             </h3>
-            <p class="text-xs text-slate-600 leading-relaxed">
-              Engineered a GPU-free, distributed VLM running across a 4-node Raspberry Pi 5 (8GB) cluster over Gigabit Ethernet sockets. Decoupled dense FFN blocks into 4 TinyExperts with a Top-1 Softmax Router, combined with dynamic INT8 weight quantization.
-            </p>
-            <div class="grid grid-cols-3 gap-2 p-3 rounded-xl bg-slate-50 border border-slate-200 text-center text-xs font-mono">
-              <div>
-                <span class="text-slate-400 text-[10px] block">BLEU-4 / CIDEr</span>
-                <strong class="text-slate-900 font-bold">25.4 / 70.4</strong>
-              </div>
-              <div>
-                <span class="text-slate-400 text-[10px] block">Cluster Speedup</span>
-                <strong class="text-emerald-700 font-bold">1.80&times;</strong>
-              </div>
-              <div>
-                <span class="text-slate-400 text-[10px] block">Latency / Node</span>
-                <strong class="text-slate-900 font-bold">48.55 ms</strong>
-              </div>
-            </div>
           </div>
-          <div class="pt-2 border-t border-slate-100 flex flex-wrap gap-1.5 text-[11px] font-mono text-slate-500">
-            <span class="px-2 py-0.5 rounded bg-slate-100">Raspberry Pi 5 Cluster</span>
-            <span class="px-2 py-0.5 rounded bg-slate-100">PyTorch</span>
-            <span class="px-2 py-0.5 rounded bg-slate-100">MoE</span>
-            <span class="px-2 py-0.5 rounded bg-slate-100">INT8 Quantization</span>
-          </div>
-        </article>
+          <span class="text-xs font-mono font-semibold text-slate-500 bg-slate-100 px-3 py-1.5 rounded-lg self-start whitespace-nowrap">
+            Fukushima Daiichi Case Study
+          </span>
+        </div>
 
-        <!-- Project 2: Fukushima JAEA Study -->
-        <article class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-4 hover:border-slate-300 transition-all">
-          <div class="space-y-3">
-            <div class="flex items-center justify-between text-xs">
-              <span class="font-mono font-bold text-amber-800 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">SICE SI2025 Award &middot; JAEA Grant</span>
-              <span class="text-slate-400">2025 &ndash; 2026</span>
-            </div>
-            <h3 class="font-serif text-lg font-bold text-slate-900 leading-snug">
-              Vision-Language Zero-Shot Diagnostics for Nuclear Decommissioning Teleoperation
-            </h3>
-            <p class="text-xs text-slate-600 leading-relaxed">
-              Applied Qwen-VL with zero-shot, Few-Shot, and Chain-of-Thought (CoT) prompting to evaluate robot teleoperation visual diagnostics inside the simulated Fukushima Daiichi 1F Primary Containment Vessel under extreme radiation constraints.
-            </p>
-            <div class="grid grid-cols-3 gap-2 p-3 rounded-xl bg-slate-50 border border-slate-200 text-center text-xs font-mono">
-              <div>
-                <span class="text-slate-400 text-[10px] block">CoT Precision</span>
-                <strong class="text-slate-900 font-bold">92.4%</strong>
-              </div>
-              <div>
-                <span class="text-slate-400 text-[10px] block">Domain Data</span>
-                <strong class="text-slate-900 font-bold">JAEA 1F Mockup</strong>
-              </div>
-              <div>
-                <span class="text-slate-400 text-[10px] block">Award</span>
-                <strong class="text-amber-700 font-bold">SI2025 表彰状</strong>
-              </div>
-            </div>
-          </div>
-          <div class="pt-2 border-t border-slate-100 flex flex-wrap gap-1.5 text-[11px] font-mono text-slate-500">
-            <span class="px-2 py-0.5 rounded bg-slate-100">Qwen-VL</span>
-            <span class="px-2 py-0.5 rounded bg-slate-100">JAEA Grant JPJA23O23813888</span>
-            <span class="px-2 py-0.5 rounded bg-slate-100">Zero-Shot CoT</span>
-          </div>
-        </article>
-
+        <p class="text-sm text-slate-600 leading-relaxed">
+          Investigated the practical edge deployment of Qwen2.5-VL-3B-Instruct for real-time robotic inspection under low-light, blurry conditions from the <strong>Fukushima Daiichi Nuclear Reactor</strong> decommissioning site. Implemented BitsAndBytes 8-bit quantization and a 3-tier master-worker architecture, reducing model memory allocation from <strong>9,344 MB down to 3,915 MB (58% reduction)</strong> while preserving descriptive output consistency.
+        </p>
       </div>
+
     </section>
 
-    <!-- Refereed Publications Section with Interactive BibTeX -->
+    <!-- Publications Section -->
     <section id="publications" class="space-y-6">
       <div class="border-b border-slate-200 pb-3 flex items-end justify-between">
         <div>
-          <span class="text-xs font-bold uppercase tracking-widest text-ivy-700 block">Peer-Reviewed Scholarship</span>
+          <span class="text-xs font-bold uppercase tracking-widest text-ivy-700 block">Scholarly Output</span>
           <h2 class="text-2xl font-serif font-bold text-slate-900">Publications & Preprints</h2>
         </div>
+        <span class="text-xs text-slate-500 font-mono">Peer-Reviewed / Scopus & ACM Indexed</span>
       </div>
 
-      <div class="space-y-4">
-
-        <!-- Pub 1: ACM ICCAI 2026 (Award Winner) -->
-        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
-          <div class="flex flex-wrap items-center justify-between gap-2">
-            <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-amber-100 text-amber-900 border border-amber-300 flex items-center gap-1">
-              <i data-lucide="trophy" class="w-3 h-3 text-amber-700"></i>
-              <span>Best Presentation Award — ACM ICCAI 2026 (NA0281)</span>
+      <div class="space-y-6">
+        
+        <!-- [C2] ICCAI 2026 -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4 hover:border-ivy-600 transition-all">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded text-[11px] font-bold bg-slate-100 text-slate-700 border border-slate-200 font-mono">[C2] Conference Paper</span>
+            <span class="px-2.5 py-0.5 rounded text-[11px] font-bold bg-amber-50 text-amber-900 border border-amber-300 flex items-center gap-1">
+              🏆 Best Presentation Award (Paper ID: NA0281)
             </span>
-            <span class="text-xs font-mono text-slate-500">April 2026 &middot; Okinawa, Japan</span>
+            <span class="px-2.5 py-0.5 rounded text-[11px] font-bold bg-emerald-50 text-emerald-900 border border-emerald-300">
+              Rated "Highly Innovative"
+            </span>
           </div>
 
-          <h3 class="text-base font-bold text-slate-900 font-serif leading-snug">
-            MoTE-VLM: A Distributed Vision-Language Model Architecture Based on Mixture of Tiny-Experts for Low-Cost Single-Board Computing Systems
+          <h3 class="text-base sm:text-lg font-bold font-serif text-slate-900 leading-snug">
+            Mixture of Tiny Experts for Resource-Constrained Vision–Language Models on Single-Board Computer Clusters
           </h3>
 
           <p class="text-xs text-slate-600">
-            <strong class="text-slate-900 underline decoration-slate-300">Muhammad Ashir</strong>, Hirokazu Madokoro, Stephanie Nix
+            <strong class="text-slate-900 underline underline-offset-2">Muhammad Ashir</strong>, Hirokazu Madokoro, and Stephanie Nix
           </p>
 
           <p class="text-xs text-slate-500 italic">
-            In Proceedings of the 2026 10th International Conference on Computing and Artificial Intelligence (ACM ICCAI 2026). ACM, New York, NY, USA.
+            In Proceedings of the 12th International Conference on Computing and Artificial Intelligence (ICCAI 2026), Okinawa, Japan, Apr. 2026. Published by ACM (Scopus, EI Compendex indexed).
           </p>
 
           <div class="flex items-center gap-3 pt-2 text-xs">
-            <button onclick="toggleBibtex('bib-iccai26')" class="font-mono text-ivy-700 hover:text-ivy-900 font-semibold flex items-center gap-1 cursor-pointer">
+            <button onclick="toggleBibtex('bib1')" class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold font-mono text-[11px] transition-all flex items-center gap-1.5">
               <i data-lucide="code" class="w-3.5 h-3.5"></i>
-              <span>[BibTeX]</span>
+              <span>BibTeX</span>
             </button>
+            <a href="https://github.com/Ashir30" target="_blank" class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold font-mono text-[11px] transition-all flex items-center gap-1.5">
+              <i data-lucide="github" class="w-3.5 h-3.5"></i>
+              <span>GitHub Code</span>
+            </a>
           </div>
 
-          <div id="bib-iccai26" class="bibtex-toggle mt-3 p-3.5 rounded-xl bg-slate-900 text-slate-200 font-mono text-[11px] overflow-x-auto leading-relaxed">
-@inproceedings{ashir2026motevlm,
-  author    = {Ashir, Muhammad and Madokoro, Hirokazu and Nix, Stephanie},
-  title     = {MoTE-VLM: A Distributed Vision-Language Model Architecture Based on Mixture of Tiny-Experts for Low-Cost Single-Board Computing Systems},
-  booktitle = {Proceedings of the 10th International Conference on Computing and Artificial Intelligence (ICCAI 2026)},
-  publisher = {Association for Computing Machinery},
-  year      = {2026},
+          <!-- BibTeX Box -->
+          <div id="bib1" class="bibtex-toggle mt-3 p-4 bg-slate-900 text-slate-200 rounded-xl text-xs font-mono overflow-x-auto">
+<pre>@inproceedings{ashir2026mote,
+  author    = {Muhammad Ashir and Hirokazu Madokoro and Stephanie Nix},
+  title     = {Mixture of Tiny Experts for Resource-Constrained Vision--Language Models on Single-Board Computer Clusters},
+  booktitle = {Proceedings of the 12th International Conference on Computing and Artificial Intelligence (ICCAI 2026)},
   address   = {Okinawa, Japan},
-  note      = {Best Presentation Award (Paper ID: NA0281)}
-}
+  publisher = {ACM},
+  year      = {2026},
+  note      = {Best Presentation Award; Rated Highly Innovative; Paper ID: NA0281}
+}</pre>
           </div>
         </div>
 
-        <!-- Pub 2: SICE SI2025 (Award Winner) -->
-        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
-          <div class="flex flex-wrap items-center justify-between gap-2">
-            <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-amber-100 text-amber-900 border border-amber-300 flex items-center gap-1">
-              <i data-lucide="award" class="w-3 h-3 text-amber-700"></i>
-              <span>Outstanding Presentation Award (表彰状) — SICE SI2025</span>
+        <!-- [C1] SI2025 -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4 hover:border-ivy-600 transition-all">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded text-[11px] font-bold bg-slate-100 text-slate-700 border border-slate-200 font-mono">[C1] Conference Paper</span>
+            <span class="px-2.5 py-0.5 rounded text-[11px] font-bold bg-amber-50 text-amber-900 border border-amber-300 flex items-center gap-1">
+              🎖️ Outstanding Presentation Award (SI2025 優秀講演賞)
             </span>
-            <span class="text-xs font-mono text-slate-500">December 2025 &middot; Takamatsu, Japan</span>
           </div>
 
-          <h3 class="text-base font-bold text-slate-900 font-serif leading-snug">
-            Investigation of Vision-Language Models for Visual Diagnostics in Robot Teleoperation
+          <h3 class="text-base sm:text-lg font-bold font-serif text-slate-900 leading-snug">
+            Optimization and Implementation of Qwen-VL on Single Board Cluster Computers
           </h3>
 
           <p class="text-xs text-slate-600">
-            <strong class="text-slate-900 underline decoration-slate-300">Muhammad Ashir</strong>, Hirokazu Madokoro, Stephanie Nix, Kazuhito Murakami
+            <strong class="text-slate-900 underline underline-offset-2">Muhammad Ashir</strong>, Hirokazu Madokoro, and Stephanie Nix
           </p>
 
           <p class="text-xs text-slate-500 italic">
-            In Proceedings of the 26th SICE System Integration Division Annual Conference (SI2025), Paper ID: 2B3-06, pp. 1104-1107. JAEA Grant JPJA23O23813888.
+            In Proceedings of the 26th SICE System Integration Division Annual Conference (SI2025), Hiroshima, Japan, pp. 203–204, Dec. 2025. Supported by JAEA Nuclear Energy S&T Grant JPJA23O23813888.
           </p>
 
           <div class="flex items-center gap-3 pt-2 text-xs">
-            <button onclick="toggleBibtex('bib-sice25')" class="font-mono text-ivy-700 hover:text-ivy-900 font-semibold flex items-center gap-1 cursor-pointer">
+            <button onclick="toggleBibtex('bib2')" class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold font-mono text-[11px] transition-all flex items-center gap-1.5">
               <i data-lucide="code" class="w-3.5 h-3.5"></i>
-              <span>[BibTeX]</span>
+              <span>BibTeX</span>
             </button>
           </div>
 
-          <div id="bib-sice25" class="bibtex-toggle mt-3 p-3.5 rounded-xl bg-slate-900 text-slate-200 font-mono text-[11px] overflow-x-auto leading-relaxed">
-@inproceedings{ashir2025sice,
-  author    = {Ashir, Muhammad and Madokoro, Hirokazu and Nix, Stephanie and Murakami, Kazuhito},
-  title     = {Investigation of Vision-Language Models for Visual Diagnostics in Robot Teleoperation},
+          <!-- BibTeX Box -->
+          <div id="bib2" class="bibtex-toggle mt-3 p-4 bg-slate-900 text-slate-200 rounded-xl text-xs font-mono overflow-x-auto">
+<pre>@inproceedings{ashir2025qwenvl,
+  author    = {Muhammad Ashir and Hirokazu Madokoro and Stephanie Nix},
+  title     = {Optimization and Implementation of Qwen-VL on Single Board Cluster Computers},
   booktitle = {Proceedings of the 26th SICE System Integration Division Annual Conference (SI2025)},
-  pages     = {1104--1107},
+  pages     = {203--204},
+  address   = {Hiroshima, Japan},
   year      = {2025},
   month     = {December},
-  address   = {Takamatsu, Kagawa, Japan},
-  note      = {Outstanding Presentation Award, Conferred Feb 16, 2026. JAEA Grant JPJA23O23813888}
-}
+  note      = {Outstanding Presentation Award (SI2025 優秀講演賞), Conferred Feb 16, 2026; Supported by JAEA Grant JPJA23O23813888}
+}</pre>
           </div>
         </div>
 
-        <!-- Pub 3: Target IEEE Access Journal Submission -->
-        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+        <!-- [J1] IEEE Access Manuscript -->
+        <div class="bg-white p-6 rounded-2xl border-2 border-dashed border-blue-200 shadow-sm space-y-3">
           <div class="flex flex-wrap items-center justify-between gap-2">
-            <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-blue-100 text-blue-900 border border-blue-300">
-              Journal Article &middot; In Preparation (11 Pages)
+            <span class="px-2.5 py-0.5 rounded text-[11px] font-bold bg-blue-50 text-ivy-700 border border-blue-200 font-mono">
+              [J1] Journal Article &middot; In Preparation
             </span>
-            <span class="text-xs font-mono text-slate-500">Target Submission: November 2026</span>
+            <span class="text-xs font-mono text-slate-400">Target Submission: Nov 2026</span>
           </div>
 
-          <h3 class="text-base font-bold text-slate-900 font-serif leading-snug">
+          <h3 class="text-base sm:text-lg font-bold font-serif text-slate-900 leading-snug">
             Distributed Mixture-of-Tiny-Experts: Low-Latency Vision-Language Foundation Model Inference Across Heterogeneous Edge Computing Clusters
           </h3>
 
           <p class="text-xs text-slate-600">
-            <strong class="text-slate-900 underline decoration-slate-300">Muhammad Ashir</strong>, Hirokazu Madokoro, Stephanie Nix
+            <strong class="text-slate-900 underline underline-offset-2">Muhammad Ashir</strong>, Hirokazu Madokoro, and Stephanie Nix
           </p>
 
           <p class="text-xs text-slate-500 italic">
             Targeting IEEE Access (Special Section on Edge Computing & Distributed Machine Learning).
           </p>
+
+          <p class="text-xs text-slate-500">
+            Status: Completed 11-page manuscript with full hardware benchmarking. Target submission: <strong>November 2026</strong>.
+          </p>
         </div>
 
       </div>
     </section>
 
-    <!-- Awards & Honors -->
+    <!-- Honours & Awards Section -->
     <section id="awards" class="space-y-6">
       <div class="border-b border-slate-200 pb-3">
-        <span class="text-xs font-bold uppercase tracking-widest text-ivy-700 block">Recognitions</span>
-        <h2 class="text-2xl font-serif font-bold text-slate-900">Honors & Academic Awards</h2>
+        <span class="text-xs font-bold uppercase tracking-widest text-ivy-700 block">Recognition</span>
+        <h2 class="text-2xl font-serif font-bold text-slate-900">Honours & Fellowships</h2>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
         
-        <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-2">
-          <div class="w-8 h-8 rounded-lg bg-amber-50 text-amber-700 flex items-center justify-center mb-2">
-            <i data-lucide="award" class="w-4 h-4"></i>
+        <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-start gap-4">
+          <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-800 border border-amber-200 flex items-center justify-center font-bold text-lg flex-shrink-0">
+            🏆
           </div>
-          <span class="font-mono text-[10px] text-slate-400 block">April 2026 &middot; ACM ICCAI</span>
-          <h4 class="font-bold text-sm text-slate-900 leading-snug">Best Presentation Award</h4>
-          <p class="text-slate-600 text-[11px]">Paper NA0281 on distributed TinyExpert VLM across edge SBC clusters. Rated "Highly Innovative".</p>
+          <div>
+            <h4 class="font-bold text-sm text-slate-900">Best Presentation Award</h4>
+            <p class="text-slate-600 mt-0.5">12th Intl. Conference on Computing & AI (ICCAI 2026), Okinawa, Japan</p>
+            <span class="text-[10px] text-slate-400 font-mono mt-1 block">Apr 2026 &middot; Paper ID: NA0281</span>
+          </div>
         </div>
 
-        <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-2">
-          <div class="w-8 h-8 rounded-lg bg-amber-50 text-amber-700 flex items-center justify-center mb-2">
-            <i data-lucide="trophy" class="w-4 h-4"></i>
+        <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-start gap-4">
+          <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-800 border border-amber-200 flex items-center justify-center font-bold text-lg flex-shrink-0">
+            🎖️
           </div>
-          <span class="font-mono text-[10px] text-slate-400 block">Feb 2026 &middot; SICE Japan</span>
-          <h4 class="font-bold text-sm text-slate-900 leading-snug">Outstanding Presentation Award (表彰状)</h4>
-          <p class="text-slate-600 text-[11px]">Awarded by the SICE Systems Integration Division for visual diagnostics in Fukushima 1F decommissioning.</p>
+          <div>
+            <h4 class="font-bold text-sm text-slate-900">Outstanding Research Presentation Award</h4>
+            <p class="text-slate-600 mt-0.5">SI2025 Hiroshima — SICE Systems Integration Division (SI2025 優秀講演賞)</p>
+            <span class="text-[10px] text-slate-400 font-mono mt-1 block">Feb 2026 &middot; SICE Division</span>
+          </div>
         </div>
 
-        <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-2">
-          <div class="w-8 h-8 rounded-lg bg-blue-50 text-ivy-700 flex items-center justify-center mb-2">
-            <i data-lucide="star" class="w-4 h-4"></i>
+        <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-start gap-4">
+          <div class="w-10 h-10 rounded-xl bg-blue-50 text-ivy-700 border border-blue-200 flex items-center justify-center font-bold text-lg flex-shrink-0">
+            🇯🇵
           </div>
-          <span class="font-mono text-[10px] text-slate-400 block">2025 &ndash; 2027 &middot; MEXT Japan</span>
-          <h4 class="font-bold text-sm text-slate-900 leading-snug">Japanese Government (MEXT) Full Scholarship</h4>
-          <p class="text-slate-600 text-[11px]">Full national fellowship covering 100% graduate tuition, enrollment fees, and monthly research stipend.</p>
+          <div>
+            <h4 class="font-bold text-sm text-slate-900">MEXT Japanese Government Scholarship</h4>
+            <p class="text-slate-600 mt-0.5">Full tuition and monthly living stipend awarded by the Ministry of Education, Japan</p>
+            <span class="text-[10px] text-slate-400 font-mono mt-1 block">Apr 2025 – Mar 2027</span>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-start gap-4">
+          <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-800 border border-emerald-200 flex items-center justify-center font-bold text-lg flex-shrink-0">
+            ⭐
+          </div>
+          <div>
+            <h4 class="font-bold text-sm text-slate-900">"Highly Innovative" Paper Rating</h4>
+            <p class="text-slate-600 mt-0.5">Conferred by peer reviewers at ACM ICCAI 2026 for the MoTE-VLM framework</p>
+            <span class="text-[10px] text-slate-400 font-mono mt-1 block">Apr 2026</span>
+          </div>
         </div>
 
       </div>
@@ -492,7 +521,7 @@
     <section id="education" class="space-y-6">
       <div class="border-b border-slate-200 pb-3">
         <span class="text-xs font-bold uppercase tracking-widest text-ivy-700 block">Academic Background</span>
-        <h2 class="text-2xl font-serif font-bold text-slate-900">Education & Degrees</h2>
+        <h2 class="text-2xl font-serif font-bold text-slate-900">Education</h2>
       </div>
 
       <div class="space-y-4">
