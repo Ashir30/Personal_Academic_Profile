@@ -59,17 +59,18 @@
 
   <!-- Sticky Top Academic Navigation -->
   <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200">
-    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between gap-4">
       
-      <a href="#" class="flex items-center gap-2.5 text-slate-900 hover:text-ivy-700 transition-colors">
-        <span class="w-8 h-8 rounded-lg bg-ivy-900 text-white flex items-center justify-center font-serif font-bold text-sm shadow-sm">MA</span>
-        <span class="font-bold text-base tracking-tight font-serif">Muhammad Ashir</span>
+      <!-- Academic Brand (Never wraps) -->
+      <a href="#" class="flex items-center gap-2.5 text-slate-900 hover:text-ivy-700 transition-colors flex-shrink-0">
+        <span class="w-8 h-8 rounded-lg bg-ivy-900 text-white flex items-center justify-center font-serif font-bold text-sm shadow-sm flex-shrink-0">MA</span>
+        <span class="font-bold text-base tracking-tight font-serif whitespace-nowrap">Muhammad Ashir</span>
       </a>
 
-      <!-- Desktop Navigation -->
-      <nav class="hidden md:flex items-center gap-6 text-xs font-semibold uppercase tracking-wider text-slate-600">
+      <!-- Desktop Navigation (Single-line, concise labels, no wrapping) -->
+      <nav class="hidden lg:flex items-center gap-4 xl:gap-5 text-xs font-semibold uppercase tracking-wider text-slate-600 whitespace-nowrap">
         <a href="#about" class="hover:text-ivy-700 transition-colors">About</a>
-        <a href="#research-vision" class="hover:text-ivy-700 transition-colors">Research Vision</a>
+        <a href="#research-vision" class="hover:text-ivy-700 transition-colors">Research</a>
         <a href="#publications" class="hover:text-ivy-700 transition-colors">Publications</a>
         <a href="#projects" class="hover:text-ivy-700 transition-colors">Projects</a>
         <a href="#phd-aspirations" class="hover:text-ivy-700 transition-colors">Ph.D. Goals</a>
@@ -78,14 +79,37 @@
         <a href="#references" class="hover:text-ivy-700 transition-colors">References</a>
       </nav>
 
-      <!-- Standard Academic Contact Button -->
-      <div class="flex items-center gap-2.5">
-        <a href="mailto:ashirmushtaq1234@gmail.com" class="px-4 py-2 rounded-lg bg-ivy-900 hover:bg-ivy-800 text-white text-xs font-semibold shadow-sm transition-all flex items-center gap-1.5">
+      <!-- Contact Button & Mobile Toggle -->
+      <div class="flex items-center gap-2 flex-shrink-0">
+        <a href="mailto:ashirmushtaq1234@gmail.com" class="hidden sm:inline-flex px-3.5 py-2 rounded-lg bg-ivy-900 hover:bg-ivy-800 text-white text-xs font-semibold shadow-sm transition-all items-center gap-1.5 whitespace-nowrap">
+          <i data-lucide="mail" class="w-3.5 h-3.5"></i>
+          <span>Email Me</span>
+        </a>
+
+        <!-- Mobile / Tablet Hamburger Button -->
+        <button id="menu-btn" onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100 hover:text-slate-900 transition-colors" aria-label="Toggle Navigation">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 bg-white px-6 py-4 space-y-3 text-xs font-semibold uppercase tracking-wider text-slate-600">
+      <a href="#about" onclick="toggleMobileMenu()" class="block py-1 hover:text-ivy-700">About</a>
+      <a href="#research-vision" onclick="toggleMobileMenu()" class="block py-1 hover:text-ivy-700">Research Vision</a>
+      <a href="#publications" onclick="toggleMobileMenu()" class="block py-1 hover:text-ivy-700">Publications</a>
+      <a href="#projects" onclick="toggleMobileMenu()" class="block py-1 hover:text-ivy-700">Projects</a>
+      <a href="#phd-aspirations" onclick="toggleMobileMenu()" class="block py-1 hover:text-ivy-700">Ph.D. Goals</a>
+      <a href="#awards" onclick="toggleMobileMenu()" class="block py-1 hover:text-ivy-700">Awards</a>
+      <a href="#education" onclick="toggleMobileMenu()" class="block py-1 hover:text-ivy-700">Education</a>
+      <a href="#references" onclick="toggleMobileMenu()" class="block py-1 hover:text-ivy-700">References</a>
+      <div class="pt-2 sm:hidden border-t border-slate-100">
+        <a href="mailto:ashirmushtaq1234@gmail.com" class="w-full py-2 rounded-lg bg-ivy-900 text-white text-center font-semibold flex items-center justify-center gap-1.5">
           <i data-lucide="mail" class="w-3.5 h-3.5"></i>
           <span>Email Me</span>
         </a>
       </div>
-
     </div>
   </header>
 
@@ -198,7 +222,7 @@
           </p>
         </div>
 
-        <!-- Four Broad Research Pillars (Appeals to Multiple Lab Disciplines) -->
+        <!-- Four Broad Research Pillars -->
         <div id="research-vision" class="space-y-4 pt-2">
           <span class="text-xs font-bold uppercase tracking-wider text-slate-400 block">Core Research Dimensions</span>
           
@@ -262,7 +286,7 @@
           <ul class="space-y-3.5 text-xs leading-relaxed text-slate-600">
             <li class="flex items-start gap-3">
               <span class="font-mono text-[11px] font-bold text-ivy-700 bg-blue-50 px-2 py-0.5 rounded border border-blue-200 whitespace-nowrap">Nov 2026</span>
-              <span>Submitting 11-page journal manuscript to <strong class="text-slate-900">IEEE Access</strong> detailing MoTE-VLM on 4-node Raspberry Pi 5 clusters.</span>
+              <span>Submitting 11-page journal manuscript to <strong class="text-slate-900">IEEE Access</strong> titled <em>"Lightweight Edge AI for Vision-Language Models: A Mixture of Tiny Experts Approach for Distributed Inference on Single Board Computer Clusters"</em>.</span>
             </li>
             <li class="flex items-start gap-3">
               <span class="font-mono text-[11px] font-bold text-amber-800 bg-amber-50 px-2 py-0.5 rounded border border-amber-200 whitespace-nowrap">Apr 2026</span>
@@ -397,7 +421,7 @@
           </div>
 
           <h3 class="text-base sm:text-lg font-bold font-serif text-slate-900 leading-snug">
-            Distributed Mixture-of-Tiny-Experts: Low-Latency Vision-Language Foundation Model Inference Across Heterogeneous Edge Computing Clusters
+            Lightweight Edge AI for Vision-Language Models: A Mixture of Tiny Experts Approach for Distributed Inference on Single Board Computer Clusters
           </h3>
 
           <p class="text-xs text-slate-600">
@@ -501,7 +525,7 @@
 
     </section>
 
-    <!-- Prospective Ph.D. Research Directions (What Professors Look For) -->
+    <!-- Prospective Ph.D. Research Directions -->
     <section id="phd-aspirations" class="space-y-6">
       <div class="border-b border-slate-200 pb-3 flex flex-col sm:flex-row sm:items-end justify-between gap-2">
         <div>
@@ -775,6 +799,13 @@
       const el = document.getElementById(id);
       if (el) {
         el.classList.toggle('active');
+      }
+    }
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      if (menu) {
+        menu.classList.toggle('hidden');
       }
     }
   </script>
