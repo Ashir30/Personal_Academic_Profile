@@ -266,11 +266,40 @@
         </figure>
       </article>
 
-      <article class="space-y-1 pt-2">
-        <h3 class="font-semibold text-lg text-slate-900">Quantized Qwen2.5-VL for nuclear decommissioning images</h3>
-        <p class="text-sm text-slate-700 leading-relaxed">
-          8-bit quantization of Qwen2.5-VL-3B cut its memory from 9.3&nbsp;GB to 3.9&nbsp;GB while keeping its descriptions of dark, blurry inspection images from the Fukushima Daiichi site usable. Supported by JAEA Grant JPJA23O23813888 (SI2025).
-        </p>
+      <article class="space-y-4 pt-4">
+        <div>
+          <h3 class="font-semibold text-lg text-slate-900">Qwen2.5-VL for nuclear decommissioning images</h3>
+          <p class="text-sm text-slate-700 leading-relaxed mt-1">
+            Inspection images from the Fukushima Daiichi decommissioning site are often dark and blurry. I asked whether a vision-language model could describe them on small edge hardware. I quantized Qwen2.5-VL-3B-Instruct to 8 bits with BitsAndBytes and proposed a three-part design that would spread the work across a Raspberry Pi cluster. This was my first project and the starting point for MoTE-VLM.
+          </p>
+        </div>
+
+        <!-- Proposed architecture (SI2025, Fig. 1) -->
+        <figure class="space-y-2">
+          <div class="flex flex-col sm:flex-row items-stretch gap-2 text-xs text-center">
+            <div class="flex-1 rounded-md border border-slate-200 bg-white p-3"><p class="font-semibold text-slate-900">Master node</p><p class="text-slate-500 mt-0.5">Runs the quantized VLM and the heavy computation</p></div>
+            <div class="self-center text-slate-400 rotate-90 sm:rotate-0" aria-hidden="true">&rarr;</div>
+            <div class="flex-1 rounded-md border border-slate-200 bg-white p-3"><p class="font-semibold text-slate-900">MoTE router</p><p class="text-slate-500 mt-0.5">Sends each prompt and image to a relevant expert</p></div>
+            <div class="self-center text-slate-400 rotate-90 sm:rotate-0" aria-hidden="true">&rarr;</div>
+            <div class="flex-1 rounded-md border border-slate-200 bg-white p-3"><p class="font-semibold text-slate-900">Expert nodes</p><p class="text-slate-500 mt-0.5">Raspberry Pis run small quantized sub-models</p></div>
+          </div>
+          <figcaption class="text-xs text-slate-500">Proposed three-part design from the SI2025 paper.</figcaption>
+        </figure>
+
+        <!-- Memory result (SI2025, Fig. 3: memory allocated) -->
+        <figure class="rounded-lg border border-slate-200 bg-white p-5 space-y-3">
+          <figcaption>
+            <p class="font-semibold text-sm text-slate-900">Memory allocated by Qwen2.5-VL-3B</p>
+            <p class="text-xs text-slate-500 mt-0.5">Lower is better.</p>
+          </figcaption>
+          <div class="chart" data-unit="MB" data-title="" data-note="58% less memory, with only a small loss in description quality on the test images."
+               data-values="Original:9344,8-bit:3915"></div>
+          <p class="text-xs text-slate-500 leading-relaxed">
+            Quality was compared by reading the two models' descriptions side by side, not with a benchmark. Peak and reserved GPU memory actually went up after quantization, so the saving shows up in allocated memory, not in every measure. Two problems remained: GGUF did not support Qwen at the time, and ONNX conversion was limited for VLMs.
+          </p>
+        </figure>
+
+        <p class="text-xs text-slate-500">Supported by JAEA Nuclear Energy S&amp;T and Human Resource Development Project, Grant JPJA23O23813888. Test images: Tokyo Electric Power Company Holdings.</p>
       </article>
     </section>
 
