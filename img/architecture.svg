@@ -1,0 +1,129 @@
+<svg viewBox="65 24 510 872" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI',Roboto,Helvetica,Arial,sans-serif">
+<title>MoTE-VLM architecture</title>
+<desc>Vertical pipeline: image through MobileNetV3-Small to 49 vision tokens; text through embedding to text tokens; concatenated and processed by 12 transformer blocks each with multi-head attention and a hash-routed mixture of four tiny experts (top-1); a tied LM head produces the caption.</desc>
+<style>
+  .t{ fill:#202124; font-weight:600; }
+  .s{ fill:#3c4043; }
+  .lg{ fill:#5f6368; }
+  .conn{ stroke:#80868b; stroke-width:2; fill:none; }
+  .rconn{ stroke:#EA4335; stroke-width:1.8; fill:none; }
+</style>
+
+<defs>
+  <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#80868b"/>
+  </marker>
+  <marker id="arrR" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#EA4335"/>
+  </marker>
+</defs>
+
+<!-- ================= CONNECTORS ================= -->
+<path class="conn" marker-end="url(#arr)" d="M170,92  L170,127"/>
+<path class="conn" marker-end="url(#arr)" d="M470,92  L470,127"/>
+<path class="conn" marker-end="url(#arr)" d="M170,190 L170,217"/>
+<path class="conn" marker-end="url(#arr)" d="M470,190 L470,217"/>
+<path class="conn" marker-end="url(#arr)" d="M170,258 L170,301"/>
+<path class="conn" marker-end="url(#arr)" d="M470,258 L470,301"/>
+<path class="conn" marker-end="url(#arr)" d="M320,348 L320,379"/>
+<path class="conn" marker-end="url(#arr)" d="M320,452 L320,487"/>
+<path class="conn" marker-end="url(#arr)" d="M320,658 L320,701"/>
+<path class="conn" marker-end="url(#arr)" d="M320,754 L320,783"/>
+
+<!-- ================= INPUTS ================= -->
+<rect x="90" y="42" width="160" height="50" rx="8" fill="#E6F4EA" stroke="#34A853" stroke-width="1.5"/>
+<text class="t" x="170" y="65" text-anchor="middle" font-size="17.2">Image</text>
+<text class="s" x="170" y="83" text-anchor="middle" font-size="13.8">224 × 224</text>
+
+<rect x="390" y="42" width="160" height="50" rx="8" fill="#FEEFE3" stroke="#EA8600" stroke-width="1.5"/>
+<text class="t" x="470" y="65" text-anchor="middle" font-size="17.2">Text tokens</text>
+<text class="s" x="470" y="83" text-anchor="middle" font-size="13.8">subword IDs</text>
+
+<!-- ================= ENCODERS ================= -->
+<rect x="80" y="130" width="180" height="60" rx="8" fill="#E6F4EA" stroke="#34A853" stroke-width="1.5"/>
+<text class="t" x="170" y="155" text-anchor="middle" font-size="16.1">MobileNetV3-Small</text>
+<text class="s" x="170" y="174" text-anchor="middle" font-size="13.8">frozen · ImageNet</text>
+
+<rect x="380" y="130" width="180" height="60" rx="8" fill="#FEEFE3" stroke="#EA8600" stroke-width="1.5"/>
+<text class="t" x="470" y="155" text-anchor="middle" font-size="16.1">Token Embedding</text>
+<text class="s" x="470" y="174" text-anchor="middle" font-size="13.8">32k × 768</text>
+
+<!-- ================= TOKEN ROWS ================= -->
+<g>
+  <rect x="112" y="222" width="16" height="34" rx="2" fill="#CEEAD6" stroke="#34A853"/>
+  <rect x="132" y="222" width="16" height="34" rx="2" fill="#CEEAD6" stroke="#34A853"/>
+  <rect x="152" y="222" width="16" height="34" rx="2" fill="#CEEAD6" stroke="#34A853"/>
+  <text class="s" x="182" y="244" font-size="16.1">…</text>
+  <rect x="196" y="222" width="16" height="34" rx="2" fill="#CEEAD6" stroke="#34A853"/>
+  <text class="lg" x="184" y="282" text-anchor="start" font-size="13.8">49 vision tokens</text>
+</g>
+<g>
+  <rect x="424" y="222" width="16" height="34" rx="2" fill="#FCDEC0" stroke="#EA8600"/>
+  <rect x="444" y="222" width="16" height="34" rx="2" fill="#FCDEC0" stroke="#EA8600"/>
+  <text class="s" x="474" y="244" font-size="16.1">…</text>
+  <rect x="488" y="222" width="16" height="34" rx="2" fill="#FCDEC0" stroke="#EA8600"/>
+  <text class="lg" x="456" y="282" text-anchor="end" font-size="13.8">T text tokens</text>
+</g>
+
+<!-- ================= CONCATENATE ================= -->
+<rect x="120" y="300" width="400" height="48" rx="8" fill="#E8F0FE" stroke="#4285F4" stroke-width="1.5"/>
+<text class="t" x="320" y="321" text-anchor="middle" font-size="16.1">Concatenate  [ vision ‖ text ]</text>
+<text class="s" x="320" y="339" text-anchor="middle" font-size="13.8">(49 + T) tokens × 768 dim</text>
+
+<!-- ================= TRANSFORMER BLOCK (x12) ================= -->
+<rect x="70" y="378" width="500" height="288" rx="12" fill="none" stroke="#4285F4" stroke-width="1.5" stroke-dasharray="7 5"/>
+<text class="t" x="90" y="399" font-size="16.1" font-weight="700">× 12 blocks</text>
+
+<rect x="150" y="406" width="340" height="46" rx="8" fill="#E8F0FE" stroke="#4285F4" stroke-width="1.5"/>
+<text class="t" x="320" y="434" text-anchor="middle" font-size="16.1">Multi-Head Self-Attention</text>
+
+<!-- MoTE sub-box -->
+<rect x="110" y="486" width="420" height="172" rx="10" fill="#F3F7FF" stroke="#4285F4" stroke-width="1.5"/>
+<text class="t" x="320" y="508" text-anchor="middle" font-size="16.1" font-weight="700">Mixture of Tiny Experts</text>
+<text class="s" x="320" y="525" text-anchor="middle" font-size="13.8">top-1 routing · one expert per Pi node</text>
+
+<!-- router on top, centered -->
+<rect x="272" y="534" width="96" height="32" rx="8" fill="#FCE8E6" stroke="#EA4335" stroke-width="1.5"/>
+<text class="t" x="320" y="555" text-anchor="middle" font-size="14">hash router</text>
+
+<!-- distribution manifold: trunk -> horizontal bus -> 4 clean drops -->
+<path class="rconn" d="M320,566 L320,577"/>
+<path class="rconn" d="M182,577 L458,577"/>
+<path class="rconn" marker-end="url(#arrR)" d="M182,577 L182,592"/>
+<path class="rconn" marker-end="url(#arrR)" d="M274,577 L274,592"/>
+<path class="rconn" marker-end="url(#arrR)" d="M366,577 L366,592"/>
+<path class="rconn" marker-end="url(#arrR)" d="M458,577 L458,592"/>
+
+<!-- experts row -->
+<g font-size="16.1">
+  <rect x="145" y="594" width="74" height="52" rx="8" fill="#D2E3FC" stroke="#4285F4"/>
+  <text class="t" x="182" y="625" text-anchor="middle">E₀</text>
+  <rect x="237" y="594" width="74" height="52" rx="8" fill="#D2E3FC" stroke="#4285F4"/>
+  <text class="t" x="274" y="625" text-anchor="middle">E₁</text>
+  <rect x="329" y="594" width="74" height="52" rx="8" fill="#D2E3FC" stroke="#4285F4"/>
+  <text class="t" x="366" y="625" text-anchor="middle">E₂</text>
+  <rect x="421" y="594" width="74" height="52" rx="8" fill="#D2E3FC" stroke="#4285F4"/>
+  <text class="t" x="458" y="625" text-anchor="middle">E₃</text>
+</g>
+
+<!-- ================= LM HEAD ================= -->
+<rect x="150" y="700" width="340" height="54" rx="8" fill="#E8F0FE" stroke="#4285F4" stroke-width="1.5"/>
+<text class="t" x="320" y="723" text-anchor="middle" font-size="16.1">LM Head</text>
+<text class="s" x="320" y="741" text-anchor="middle" font-size="13.8">768 → 32k · tied with embedding</text>
+
+<!-- ================= OUTPUT ================= -->
+<rect x="120" y="782" width="400" height="46" rx="8" fill="#F1F3F4" stroke="#9AA0A6" stroke-width="1.5"/>
+<text class="t" x="320" y="810" text-anchor="middle" font-size="14.9" font-style="italic">"A bench sitting on the side of a street."</text>
+
+<!-- ================= LEGEND ================= -->
+<g font-size="13.8">
+  <rect x="118" y="862" width="14" height="14" rx="3" fill="#E6F4EA" stroke="#34A853"/>
+  <text class="lg" x="138" y="874">vision</text>
+  <rect x="205" y="862" width="14" height="14" rx="3" fill="#FEEFE3" stroke="#EA8600"/>
+  <text class="lg" x="225" y="874">language</text>
+  <rect x="310" y="862" width="14" height="14" rx="3" fill="#E8F0FE" stroke="#4285F4"/>
+  <text class="lg" x="330" y="874">shared / experts</text>
+  <rect x="452" y="862" width="14" height="14" rx="3" fill="#FCE8E6" stroke="#EA4335"/>
+  <text class="lg" x="472" y="874">router</text>
+</g>
+</svg>
