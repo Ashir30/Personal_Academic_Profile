@@ -102,16 +102,17 @@
   </style>
 </head>
 <body class="bg-[#fbfbfd] text-slate-800 font-sans antialiased">
+  <div class="h-1 bg-gradient-to-r from-indigo-500 via-sky-500 to-teal-400" aria-hidden="true"></div>
 
   <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200">
     <div class="max-w-4xl mx-auto px-5 h-14 flex items-center justify-between gap-4">
       <a href="#" class="font-serif font-bold text-lg text-slate-900 whitespace-nowrap">Muhammad Ashir</a>
       <nav class="hidden md:flex items-center gap-5 text-sm text-slate-600">
-        <a href="#research" class="hover:text-slate-900">Research</a>
-        <a href="#publications" class="hover:text-slate-900">Publications</a>
-        <a href="#projects" class="hover:text-slate-900">Projects</a>
-        <a href="#education" class="hover:text-slate-900">Education</a>
-        <a href="Muhammad_Ashir_CV.pdf" target="_blank" rel="noopener" class="px-3 py-1.5 rounded-md border border-slate-300 hover:border-slate-500 text-slate-800">CV</a>
+        <a href="#research" class="hover:text-indigo-600">Research</a>
+        <a href="#publications" class="hover:text-indigo-600">Publications</a>
+        <a href="#projects" class="hover:text-indigo-600">Projects</a>
+        <a href="#education" class="hover:text-indigo-600">Education</a>
+        <a href="Muhammad_Ashir_CV.pdf" target="_blank" rel="noopener" class="px-3 py-1.5 rounded-md bg-indigo-600 hover:bg-indigo-700 text-white">CV</a>
       </nav>
       <button id="menu-btn" onclick="toggleMobileMenu()" class="md:hidden p-2 -mr-2 text-slate-600" aria-label="Toggle navigation">
         <i data-lucide="menu" class="w-5 h-5"></i>
@@ -129,70 +130,71 @@
   <main class="max-w-4xl mx-auto px-5 py-10 space-y-14">
 
     <!-- About -->
-    <section id="about" class="flex flex-col sm:flex-row gap-7 items-start">
-      <img src="profile.jpg" alt="Portrait of Muhammad Ashir" width="144" height="144" class="w-36 h-36 rounded-xl object-cover object-top border border-slate-200 flex-shrink-0">
+    <section id="about" class="flex flex-col sm:flex-row gap-7 items-start rounded-2xl border border-indigo-100 bg-gradient-to-br from-indigo-50 via-white to-teal-50 p-6 sm:p-8">
+      <img src="profile.jpg" alt="Portrait of Muhammad Ashir" width="144" height="144" class="w-36 h-36 rounded-2xl object-cover object-top ring-4 ring-white shadow-md flex-shrink-0">
       <div class="space-y-3">
         <div>
           <h1 class="font-serif text-3xl font-bold text-slate-900">Muhammad Ashir</h1>
-          <p class="text-sm text-slate-500 mt-1">M.S. student &middot; Iwate Prefectural University, Japan &middot; MEXT Scholar</p>
+          <p class="text-sm text-indigo-700/80 font-medium mt-1">M.S. student &middot; Iwate Prefectural University, Japan &middot; MEXT Scholar</p>
         </div>
         <p class="text-[15px] leading-relaxed text-slate-700">
           I work in machine learning and deep learning, mainly on vision-language models. My current research makes these models small and cheap enough to run on low-cost hardware, using Mixture-of-Experts, quantization and distributed inference, and I test them on real Raspberry Pi clusters. I am advised by Prof. Hirokazu Madokoro and Prof. Stephanie Nix.
         </p>
+        <span class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 text-xs font-semibold"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>Open to Ph.D. positions, 2027</span>
         <p class="text-[15px] leading-relaxed text-slate-700">
-          I am looking for a <strong class="font-semibold text-slate-900">Ph.D. position starting in 2027</strong> (spring or fall), and I am open to projects across AI, machine learning and deep learning.
+          I am looking for a Ph.D. starting in spring or fall 2027, and I am open to projects across AI, machine learning and deep learning.
         </p>
-        <div class="flex flex-wrap gap-x-5 gap-y-2 pt-1 text-sm">
-          <a href="mailto:ashirmushtaq1234@gmail.com" class="inline-flex items-center gap-1.5 text-slate-700 hover:text-slate-900"><i data-lucide="mail" class="w-4 h-4"></i>Email</a>
-          <a href="Muhammad_Ashir_CV.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-slate-700 hover:text-slate-900"><i data-lucide="file-text" class="w-4 h-4"></i>CV</a>
-          <a href="https://github.com/Ashir30" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-slate-700 hover:text-slate-900"><i data-lucide="github" class="w-4 h-4"></i>GitHub</a>
-          <a href="https://orcid.org/0009-0003-3220-7874" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-slate-700 hover:text-slate-900"><i data-lucide="id-card" class="w-4 h-4"></i>ORCID</a>
+        <div class="flex flex-wrap gap-2 pt-1 text-sm">
+          <a href="mailto:ashirmushtaq1234@gmail.com" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white shadow-sm"><i data-lucide="mail" class="w-4 h-4"></i>Email</a>
+          <a href="Muhammad_Ashir_CV.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-slate-200 hover:border-indigo-300 hover:text-indigo-700 text-slate-700"><i data-lucide="file-text" class="w-4 h-4"></i>CV</a>
+          <a href="https://github.com/Ashir30" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-slate-200 hover:border-indigo-300 hover:text-indigo-700 text-slate-700"><i data-lucide="github" class="w-4 h-4"></i>GitHub</a>
+          <a href="https://orcid.org/0009-0003-3220-7874" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-slate-200 hover:border-indigo-300 hover:text-indigo-700 text-slate-700"><i data-lucide="id-card" class="w-4 h-4"></i>ORCID</a>
         </div>
       </div>
     </section>
 
     <!-- News -->
     <section class="space-y-3">
-      <h2 class="font-serif text-xl font-bold text-slate-900">News</h2>
+      <h2 class="font-serif text-xl font-bold text-slate-900 flex items-center gap-2.5"><span class="w-1.5 h-5 rounded-full bg-gradient-to-b from-indigo-500 to-teal-400" aria-hidden="true"></span>News</h2>
       <ul class="text-sm text-slate-700 divide-y divide-slate-100 border-y border-slate-100">
-        <li class="py-2 flex gap-4"><span class="w-20 flex-shrink-0 text-slate-400 tabular-nums">Oct 2026</span><span>Journal version of MoTE-VLM (fully GPU-free) written; submission to IEEE Access planned for November.</span></li>
-        <li class="py-2 flex gap-4"><span class="w-20 flex-shrink-0 text-slate-400 tabular-nums">Apr 2026</span><span>Best Presentation Award at ICCAI 2026, Okinawa.</span></li>
-        <li class="py-2 flex gap-4"><span class="w-20 flex-shrink-0 text-slate-400 tabular-nums">Feb 2026</span><span>Outstanding Presentation Award at SICE SI2025.</span></li>
-        <li class="py-2 flex gap-4"><span class="w-20 flex-shrink-0 text-slate-400 tabular-nums">Apr 2025</span><span>Started my M.S. at Iwate Prefectural University on the MEXT scholarship.</span></li>
+        <li class="py-2 flex gap-4"><span class="w-20 flex-shrink-0 text-indigo-600 font-medium tabular-nums">Oct 2026</span><span>Journal version of MoTE-VLM (fully GPU-free) written; submission to IEEE Access planned for November.</span></li>
+        <li class="py-2 flex gap-4"><span class="w-20 flex-shrink-0 text-indigo-600 font-medium tabular-nums">Apr 2026</span><span>Best Presentation Award at ICCAI 2026, Okinawa.</span></li>
+        <li class="py-2 flex gap-4"><span class="w-20 flex-shrink-0 text-indigo-600 font-medium tabular-nums">Feb 2026</span><span>Outstanding Presentation Award at SICE SI2025.</span></li>
+        <li class="py-2 flex gap-4"><span class="w-20 flex-shrink-0 text-indigo-600 font-medium tabular-nums">Apr 2025</span><span>Started my M.S. at Iwate Prefectural University on the MEXT scholarship.</span></li>
       </ul>
     </section>
 
     <!-- Research interests -->
     <section id="research" class="space-y-4">
-      <h2 class="font-serif text-xl font-bold text-slate-900">Research interests</h2>
+      <h2 class="font-serif text-xl font-bold text-slate-900 flex items-center gap-2.5"><span class="w-1.5 h-5 rounded-full bg-gradient-to-b from-indigo-500 to-teal-400" aria-hidden="true"></span>Research interests</h2>
       <p class="text-sm text-slate-600">My current projects focus on efficient vision-language models, but my interests cover machine learning and deep learning more broadly.</p>
-      <div class="grid sm:grid-cols-2 gap-x-8 gap-y-4 text-sm">
-        <div class="flex gap-3"><i data-lucide="brain" class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5"></i><div><p class="font-semibold text-slate-900">Deep learning</p><p class="text-slate-600">Transformers, training and fine-tuning, knowledge distillation</p></div></div>
-        <div class="flex gap-3"><i data-lucide="image" class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5"></i><div><p class="font-semibold text-slate-900">Multimodal and vision-language models</p><p class="text-slate-600">Image captioning, visual instruction following</p></div></div>
-        <div class="flex gap-3"><i data-lucide="layers" class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5"></i><div><p class="font-semibold text-slate-900">Efficient machine learning</p><p class="text-slate-600">Mixture-of-Experts, quantization, model compression</p></div></div>
-        <div class="flex gap-3"><i data-lucide="scan-eye" class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5"></i><div><p class="font-semibold text-slate-900">Computer vision</p><p class="text-slate-600">Perception from low-light and degraded images</p></div></div>
-        <div class="flex gap-3"><i data-lucide="network" class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5"></i><div><p class="font-semibold text-slate-900">ML systems and edge AI</p><p class="text-slate-600">Distributed inference on low-cost hardware</p></div></div>
-        <div class="flex gap-3"><i data-lucide="bot" class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5"></i><div><p class="font-semibold text-slate-900">Embodied AI and robotics</p><p class="text-slate-600">Efficient perception for robots</p></div></div>
+      <div class="grid sm:grid-cols-2 gap-3 text-sm">
+        <div class="flex gap-3 items-start p-3 rounded-xl bg-white border border-slate-200 hover:border-indigo-200 hover:shadow-sm transition"><span class="w-9 h-9 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center flex-shrink-0"><i data-lucide="brain" class="w-5 h-5"></i></span><div><p class="font-semibold text-slate-900">Deep learning</p><p class="text-slate-600">Transformers, training and fine-tuning, knowledge distillation</p></div></div>
+        <div class="flex gap-3 items-start p-3 rounded-xl bg-white border border-slate-200 hover:border-sky-200 hover:shadow-sm transition"><span class="w-9 h-9 rounded-lg bg-sky-50 text-sky-600 flex items-center justify-center flex-shrink-0"><i data-lucide="image" class="w-5 h-5"></i></span><div><p class="font-semibold text-slate-900">Multimodal and vision-language models</p><p class="text-slate-600">Image captioning, visual instruction following</p></div></div>
+        <div class="flex gap-3 items-start p-3 rounded-xl bg-white border border-slate-200 hover:border-violet-200 hover:shadow-sm transition"><span class="w-9 h-9 rounded-lg bg-violet-50 text-violet-600 flex items-center justify-center flex-shrink-0"><i data-lucide="layers" class="w-5 h-5"></i></span><div><p class="font-semibold text-slate-900">Efficient machine learning</p><p class="text-slate-600">Mixture-of-Experts, quantization, model compression</p></div></div>
+        <div class="flex gap-3 items-start p-3 rounded-xl bg-white border border-slate-200 hover:border-teal-200 hover:shadow-sm transition"><span class="w-9 h-9 rounded-lg bg-teal-50 text-teal-600 flex items-center justify-center flex-shrink-0"><i data-lucide="scan-eye" class="w-5 h-5"></i></span><div><p class="font-semibold text-slate-900">Computer vision</p><p class="text-slate-600">Perception from low-light and degraded images</p></div></div>
+        <div class="flex gap-3 items-start p-3 rounded-xl bg-white border border-slate-200 hover:border-amber-200 hover:shadow-sm transition"><span class="w-9 h-9 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center flex-shrink-0"><i data-lucide="network" class="w-5 h-5"></i></span><div><p class="font-semibold text-slate-900">ML systems and edge AI</p><p class="text-slate-600">Distributed inference on low-cost hardware</p></div></div>
+        <div class="flex gap-3 items-start p-3 rounded-xl bg-white border border-slate-200 hover:border-rose-200 hover:shadow-sm transition"><span class="w-9 h-9 rounded-lg bg-rose-50 text-rose-600 flex items-center justify-center flex-shrink-0"><i data-lucide="bot" class="w-5 h-5"></i></span><div><p class="font-semibold text-slate-900">Embodied AI and robotics</p><p class="text-slate-600">Efficient perception for robots</p></div></div>
       </div>
     </section>
 
     <!-- Publications -->
     <section id="publications" class="space-y-4">
-      <h2 class="font-serif text-xl font-bold text-slate-900">Publications</h2>
+      <h2 class="font-serif text-xl font-bold text-slate-900 flex items-center gap-2.5"><span class="w-1.5 h-5 rounded-full bg-gradient-to-b from-indigo-500 to-teal-400" aria-hidden="true"></span>Publications</h2>
       <ol class="space-y-5 text-sm">
-        <li>
+        <li class="pl-4 border-l-2 border-sky-300">
           <p class="font-semibold text-slate-900">Lightweight Edge AI for Vision-Language Models: A Mixture of Tiny Experts Approach for Distributed Inference on Single Board Computer Clusters</p>
-          <p class="text-slate-600"><span class="underline underline-offset-2">Muhammad Ashir</span>, Hirokazu Madokoro, Stephanie Nix</p>
-          <p class="text-slate-500 italic">Manuscript in preparation for IEEE Access, 2026</p>
+          <p class="text-slate-600"><span class="font-medium text-indigo-700">Muhammad Ashir</span>, Hirokazu Madokoro, Stephanie Nix</p>
+          <p class="text-slate-500 mt-0.5"><span class="inline-flex px-2 py-0.5 rounded-full bg-sky-50 text-sky-800 border border-sky-200 text-xs font-medium">In preparation</span> <span class="italic">IEEE Access</span>, 2026</p>
         </li>
-        <li>
+        <li class="pl-4 border-l-2 border-indigo-300">
           <p class="font-semibold text-slate-900">Mixture of Tiny Experts for Resource-Constrained Vision–Language Models on Single-Board Computer Clusters</p>
-          <p class="text-slate-600"><span class="underline underline-offset-2">Muhammad Ashir</span>, Hirokazu Madokoro, Stephanie Nix</p>
-          <p class="text-slate-500"><span class="italic">ICCAI 2026</span> (ACM), Okinawa, Japan &middot; <span class="text-slate-700">Best Presentation Award</span></p>
+          <p class="text-slate-600"><span class="font-medium text-indigo-700">Muhammad Ashir</span>, Hirokazu Madokoro, Stephanie Nix</p>
+          <p class="text-slate-500"><span class="italic">ICCAI 2026</span> (ACM), Okinawa, Japan <span class="inline-flex items-center gap-1 ml-1 px-2 py-0.5 rounded-full bg-amber-50 text-amber-800 border border-amber-200 text-xs font-medium"><i data-lucide="award" class="w-3 h-3"></i>Best Presentation Award</span></p>
           <div class="flex gap-2 mt-2 text-xs no-print">
-            <a href="papers/Ashir_ICCAI2026_MoTE-VLM.pdf" target="_blank" rel="noopener" class="px-2.5 py-1 rounded border border-slate-300 hover:border-slate-500">PDF</a>
-            <button onclick="toggleBibtex('bib1')" class="px-2.5 py-1 rounded border border-slate-300 hover:border-slate-500">BibTeX</button>
-            <a href="https://github.com/Ashir30/Mixture-of-tinyexperts-on-single-board-cluster-computer-" target="_blank" rel="noopener" class="px-2.5 py-1 rounded border border-slate-300 hover:border-slate-500">Code</a>
+            <a href="papers/Ashir_ICCAI2026_MoTE-VLM.pdf" target="_blank" rel="noopener" class="px-2.5 py-1 rounded-md border border-slate-300 hover:border-indigo-400 hover:text-indigo-700 bg-white">PDF</a>
+            <button onclick="toggleBibtex('bib1')" class="px-2.5 py-1 rounded-md border border-slate-300 hover:border-indigo-400 hover:text-indigo-700 bg-white">BibTeX</button>
+            <a href="https://github.com/Ashir30/Mixture-of-tinyexperts-on-single-board-cluster-computer-" target="_blank" rel="noopener" class="px-2.5 py-1 rounded-md border border-slate-300 hover:border-indigo-400 hover:text-indigo-700 bg-white">Code</a>
           </div>
           <div id="bib1" class="bibtex-toggle mt-2 p-3 bg-slate-900 text-slate-200 rounded-md text-xs font-mono overflow-x-auto">
 <pre>@inproceedings{ashir2026mote,
@@ -206,12 +208,12 @@
 }</pre>
           </div>
         </li>
-        <li>
+        <li class="pl-4 border-l-2 border-indigo-300">
           <p class="font-semibold text-slate-900">Optimization and Implementation of Qwen-VL on Single Board Cluster Computers</p>
-          <p class="text-slate-600"><span class="underline underline-offset-2">Muhammad Ashir</span>, Hirokazu Madokoro, Stephanie Nix</p>
-          <p class="text-slate-500"><span class="italic">SI2025</span> (SICE), Hiroshima, Japan, pp. 203–204 &middot; <span class="text-slate-700">Outstanding Presentation Award</span></p>
+          <p class="text-slate-600"><span class="font-medium text-indigo-700">Muhammad Ashir</span>, Hirokazu Madokoro, Stephanie Nix</p>
+          <p class="text-slate-500"><span class="italic">SI2025</span> (SICE), Hiroshima, Japan, pp. 203–204 <span class="inline-flex items-center gap-1 ml-1 px-2 py-0.5 rounded-full bg-amber-50 text-amber-800 border border-amber-200 text-xs font-medium"><i data-lucide="award" class="w-3 h-3"></i>Outstanding Presentation Award</span></p>
           <div class="flex gap-2 mt-2 text-xs no-print">
-            <button onclick="toggleBibtex('bib2')" class="px-2.5 py-1 rounded border border-slate-300 hover:border-slate-500">BibTeX</button>
+            <button onclick="toggleBibtex('bib2')" class="px-2.5 py-1 rounded-md border border-slate-300 hover:border-indigo-400 hover:text-indigo-700 bg-white">BibTeX</button>
           </div>
           <div id="bib2" class="bibtex-toggle mt-2 p-3 bg-slate-900 text-slate-200 rounded-md text-xs font-mono overflow-x-auto">
 <pre>@inproceedings{ashir2025qwenvl,
@@ -230,7 +232,7 @@
 
     <!-- Projects -->
     <section id="projects" class="space-y-6">
-      <h2 class="font-serif text-xl font-bold text-slate-900">Projects</h2>
+      <h2 class="font-serif text-xl font-bold text-slate-900 flex items-center gap-2.5"><span class="w-1.5 h-5 rounded-full bg-gradient-to-b from-indigo-500 to-teal-400" aria-hidden="true"></span>Projects</h2>
 
       <article class="space-y-5">
         <div>
@@ -280,11 +282,11 @@
         <!-- Proposed architecture (SI2025, Fig. 1) -->
         <figure class="space-y-2">
           <div class="flex flex-col sm:flex-row items-stretch gap-2 text-xs text-center">
-            <div class="flex-1 rounded-md border border-slate-200 bg-white p-3"><p class="font-semibold text-slate-900">Master node</p><p class="text-slate-500 mt-0.5">Runs the quantized VLM and the heavy computation</p></div>
+            <div class="flex-1 rounded-md border border-slate-200 border-t-4 border-t-indigo-400 bg-white p-3"><p class="font-semibold text-indigo-700">Master node</p><p class="text-slate-500 mt-0.5">Runs the quantized VLM and the heavy computation</p></div>
             <div class="self-center text-slate-400 rotate-90 sm:rotate-0" aria-hidden="true">&rarr;</div>
-            <div class="flex-1 rounded-md border border-slate-200 bg-white p-3"><p class="font-semibold text-slate-900">MoTE router</p><p class="text-slate-500 mt-0.5">Sends each prompt and image to a relevant expert</p></div>
+            <div class="flex-1 rounded-md border border-slate-200 border-t-4 border-t-violet-400 bg-white p-3"><p class="font-semibold text-violet-700">MoTE router</p><p class="text-slate-500 mt-0.5">Sends each prompt and image to a relevant expert</p></div>
             <div class="self-center text-slate-400 rotate-90 sm:rotate-0" aria-hidden="true">&rarr;</div>
-            <div class="flex-1 rounded-md border border-slate-200 bg-white p-3"><p class="font-semibold text-slate-900">Expert nodes</p><p class="text-slate-500 mt-0.5">Raspberry Pis run small quantized sub-models</p></div>
+            <div class="flex-1 rounded-md border border-slate-200 border-t-4 border-t-teal-400 bg-white p-3"><p class="font-semibold text-teal-700">Expert nodes</p><p class="text-slate-500 mt-0.5">Raspberry Pis run small quantized sub-models</p></div>
           </div>
           <figcaption class="text-xs text-slate-500">Proposed three-part design from the SI2025 paper.</figcaption>
         </figure>
@@ -308,7 +310,7 @@
 
     <!-- Education -->
     <section id="education" class="space-y-4">
-      <h2 class="font-serif text-xl font-bold text-slate-900">Education</h2>
+      <h2 class="font-serif text-xl font-bold text-slate-900 flex items-center gap-2.5"><span class="w-1.5 h-5 rounded-full bg-gradient-to-b from-indigo-500 to-teal-400" aria-hidden="true"></span>Education</h2>
       <div class="space-y-4 text-sm">
         <div>
           <div class="flex flex-wrap justify-between gap-x-4"><p class="font-semibold text-slate-900">M.S., Software and Information Science</p><p class="text-slate-500">2025 – 2027 (expected)</p></div>
@@ -325,28 +327,28 @@
     <!-- Awards + Skills -->
     <section class="grid md:grid-cols-2 gap-10">
       <div class="space-y-3">
-        <h2 class="font-serif text-xl font-bold text-slate-900">Awards</h2>
+        <h2 class="font-serif text-xl font-bold text-slate-900 flex items-center gap-2.5"><span class="w-1.5 h-5 rounded-full bg-gradient-to-b from-indigo-500 to-teal-400" aria-hidden="true"></span>Awards</h2>
         <ul class="text-sm text-slate-700 space-y-2">
-          <li>Best Presentation Award, ICCAI 2026 <span class="text-slate-400">&middot; Apr 2026</span></li>
-          <li>Outstanding Presentation Award, SICE SI2025 <span class="text-slate-400">&middot; Feb 2026</span></li>
-          <li>MEXT Japanese Government Scholarship <span class="text-slate-400">&middot; 2025 – 2027</span></li>
+          <li class="flex items-start gap-2"><i data-lucide="award" class="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5"></i><span>Best Presentation Award, ICCAI 2026 <span class="text-slate-400">&middot; Apr 2026</span></span></li>
+          <li class="flex items-start gap-2"><i data-lucide="award" class="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5"></i><span>Outstanding Presentation Award, SICE SI2025 <span class="text-slate-400">&middot; Feb 2026</span></span></li>
+          <li class="flex items-start gap-2"><i data-lucide="graduation-cap" class="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5"></i><span>MEXT Japanese Government Scholarship <span class="text-slate-400">&middot; 2025 – 2027</span></span></li>
         </ul>
       </div>
       <div class="space-y-3">
-        <h2 class="font-serif text-xl font-bold text-slate-900">Skills</h2>
+        <h2 class="font-serif text-xl font-bold text-slate-900 flex items-center gap-2.5"><span class="w-1.5 h-5 rounded-full bg-gradient-to-b from-indigo-500 to-teal-400" aria-hidden="true"></span>Skills</h2>
         <ul class="text-sm text-slate-700 space-y-2">
-          <li><span class="text-slate-500">Machine learning:</span> deep learning, transformers, CNNs, vision-language models, Mixture-of-Experts</li>
-          <li><span class="text-slate-500">Training and evaluation:</span> training from scratch, instruction tuning, knowledge distillation, quantization, ablation studies, bootstrap significance tests</li>
-          <li><span class="text-slate-500">Programming:</span> Python, C++, PyTorch, Hugging Face Transformers, Git, Linux, LaTeX</li>
-          <li><span class="text-slate-500">Systems:</span> GPU training, distributed inference over TCP, Raspberry Pi clusters</li>
-          <li><span class="text-slate-500">Languages:</span> English (IELTS on 14 Nov 2026), Japanese (A2), Urdu</li>
+          <li><span class="text-indigo-600 font-medium">Machine learning:</span> deep learning, transformers, CNNs, vision-language models, Mixture-of-Experts</li>
+          <li><span class="text-indigo-600 font-medium">Training and evaluation:</span> training from scratch, instruction tuning, knowledge distillation, quantization, ablation studies, bootstrap significance tests</li>
+          <li><span class="text-indigo-600 font-medium">Programming:</span> Python, C++, PyTorch, Hugging Face Transformers, Git, Linux, LaTeX</li>
+          <li><span class="text-indigo-600 font-medium">Systems:</span> GPU training, distributed inference over TCP, Raspberry Pi clusters</li>
+          <li><span class="text-indigo-600 font-medium">Languages:</span> English (IELTS on 14 Nov 2026), Japanese (A2), Urdu</li>
         </ul>
       </div>
     </section>
 
     <!-- References -->
     <section class="space-y-3">
-      <h2 class="font-serif text-xl font-bold text-slate-900">References</h2>
+      <h2 class="font-serif text-xl font-bold text-slate-900 flex items-center gap-2.5"><span class="w-1.5 h-5 rounded-full bg-gradient-to-b from-indigo-500 to-teal-400" aria-hidden="true"></span>References</h2>
       <div class="grid sm:grid-cols-2 gap-4 text-sm">
         <div><p class="font-semibold text-slate-900">Prof. Hirokazu Madokoro</p><p class="text-slate-600">Iwate Prefectural University (advisor)</p><a href="mailto:hirokazu_m@iwate-pu.ac.jp" class="text-slate-500 hover:text-slate-900">hirokazu_m@iwate-pu.ac.jp</a></div>
         <div><p class="font-semibold text-slate-900">Prof. Stephanie Nix</p><p class="text-slate-600">Iwate Prefectural University (co-advisor)</p><a href="mailto:nix_s@iwate-pu.ac.jp" class="text-slate-500 hover:text-slate-900">nix_s@iwate-pu.ac.jp</a></div>
@@ -355,7 +357,7 @@
 
   </main>
 
-  <footer class="border-t border-slate-200 text-slate-400 text-xs py-8 px-5">
+  <footer class="mt-6 border-t border-slate-200 bg-gradient-to-r from-indigo-50/60 to-teal-50/60 text-slate-400 text-xs py-8 px-5">
     <div class="max-w-4xl mx-auto flex justify-between gap-4">
       <p>&copy; 2026 Muhammad Ashir</p>
       <p>Last updated October 2026</p>
@@ -373,7 +375,7 @@
         var pct = (r.v / max * 100).toFixed(1);
         html += '<div class="flex items-center gap-2 text-xs" role="listitem" title="' + r.k + ': ' + r.v + ' ' + unit + '">' +
           '<span class="w-14 flex-shrink-0 text-slate-500">' + r.k + '</span>' +
-          '<span class="flex-1 h-4 bg-slate-100 rounded-sm overflow-hidden"><span class="block h-full bg-[#1d3557] rounded-r" style="width:' + pct + '%"></span></span>' +
+          '<span class="flex-1 h-4 bg-slate-100 rounded-sm overflow-hidden"><span class="block h-full bg-indigo-500 rounded-r" style="width:' + pct + '%"></span></span>' +
           '<span class="w-16 flex-shrink-0 text-right tabular-nums text-slate-700">' + r.v + ' ' + unit + '</span></div>';
       });
       html += '</div><p class="text-xs text-slate-500 mt-2">' + el.dataset.note + '</p>';
